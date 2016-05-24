@@ -15,6 +15,8 @@ attachments :
 
 You've learned to use built-in functions in Python such as ```print()```, ```type()```, and ```str()```.
 
+We know that `print()` accepts a string (or a set of strings) and prints the string out into the console. The `type()` function accepts an object and returns the type of that object. The `str()` function accepts an object and returns the string representation of that object.
+
 *** =instructions
 - Long movies, clearly
 - Short movies, clearly
