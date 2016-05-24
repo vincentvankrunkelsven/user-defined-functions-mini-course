@@ -67,12 +67,19 @@ To start a function definition,
 
 - begin with the keyword `def`, 
 - followed by a _function name_, 
-- a set of parentheses, 
-- and a colon. 
+- a set of _parentheses_ `()`, 
+- and a _colon_ `:`. 
  
-We'll use `shout` for the function name in this example.
+Let's create a function that squares a number. The function name `square` is perfect for this. Following the steps above, we get the following:
 
-`def shout ():`
+```def square():```
+
+To complete the function definition, let's complete the _function body_ by squaring a value, say 4:
+
+```
+def square():
+    4 ** 2
+```
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
