@@ -303,7 +303,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
-Let's tweak our `square` function a little bit more. Suppose that instead of simply squaring a value, we'd like to raise a value to another value that's also passed to the function. We can do this by having our function accept two parameters instead of just one. We should also change our function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
+Let's tweak our `square` function a little bit more. Suppose that instead of simply squaring a value, we'd like to _raise_ a value to another value that's also passed to the function. We can do this by having our function accept two parameters instead of just one. We should also change our function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
 
 ```
 def raise( value1, value2 ):
@@ -317,13 +317,13 @@ The function is called by passing in _two_ arguments. The order in which the arg
 
 ``` raise( 2, 3 )```
 
-`value1` would contain 2 and `value2` would contain 8. Looking at the function body, this means that the computation `value1 ** value2` translates to `2 ** 3`. The function should return the value, 8.
+`value1` would contain 2 and `value2` would contain 3. Looking at the function body, this means that the computation `value1 ** value2` translates to `2 ** 3`. The function should return the value, 8.
+
+Let's modify the `shout` function to accept two arguments.
 
 *** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
+- The function `shout()`, which you wrote earlier, is shown. Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
+- 
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
@@ -346,32 +346,50 @@ import numpy as np
 
 *** =sample_code
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout, which accepts the parameters word1 and word2
+def _____ ( _____, _____ ):
 
-# Import matplotlib.pyplot
+    # Concatenate the string '!!!' to word1 and assign to shout1
+    
+    
+    # Concatenate the string '!!!' to word2 and assign to shout2
+    
+    
+    # Concatenate word2 to word1 and assign to new_shout
+    
+
+    # Return new_shout
+    
+
+# Call shout with the strings 'help' and 'fire' and assign the result to yell
 
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-
-
-# Show the plot
+# Print the value of yell
 
 ```
 
 *** =solution
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout, which accepts the parameters word1 and word2
+def shout ( word1, word2 ):
 
-# Import matplotlib.pyplot
-import matplotlib.pyplot as plt
+    # Concatenate the string '!!!' to word1 and assign to shout1
+    shout1 = word1 + '!!!'
+    
+    # Concatenate the string '!!!' to word2 and assign to shout2
+    shout2 = word2 + '!!!'
+    
+    # Concatenate word2 to word1 and assign to new_shout
+    new_shout = word1 + word2
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
+    # Return new_shout
+    return new_shout
 
-# Show the plot
-plt.show()
+# Call shout with the strings 'help' and 'fire' and assign the result to yell
+yell = shout( 'help', 'fire' )
+
+# Print the value of yell
+print( yell )
 ```
 
 *** =sct
