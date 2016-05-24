@@ -13,9 +13,9 @@ attachments :
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
 
-You've learned to use built-in functions in Python such as `print()`, `type()`, and `str()`.
+You've learned to use built-in functions in Python such as `print()` and `type()`.
 
-We know that `print()` accepts a string (or a set of strings) and prints the string out into the console. The `type()` function accepts an object and returns the type of that object. The `str()` function accepts an object and returns the string representation of that object.
+We know that `print()` accepts a string (or a set of strings) and prints the string out into the console. The `type()` function accepts an object and returns the type of that object.
 
 *** =instructions
 - Long movies, clearly
@@ -39,8 +39,8 @@ import matplotlib.pyplot as plt
 movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
 # 3. Create a plot in the viewer, that students can check out while reading the exercise
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
+#plt.scatter(movies.runtime, movies.rating)
+#plt.show()
 ```
 
 *** =sct
@@ -63,7 +63,13 @@ test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
 
 While built-in Python functions are cool, you will need functions that have functionality specific to your needs. Fortunately, you can define your own functions in Python!
 
-To start a function definition, begin with the keyword `def` followed by a function name, a set of parentheses, and a colon. We'll use `shout` for the function name in this example.
+To start a function definition, 
+- begin with the keyword `def`, 
+- followed by a _function name_, 
+- a set of parentheses, 
+- and a colon. 
+ 
+We'll use `shout` for the function name in this example.
 
 `def shout ():`
 
