@@ -94,7 +94,7 @@ def square( value ):
 
 Our function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
 
-You will now define your own function. You will define the function `shout` which takes a string argument and prints out that string, appended with `!!!`.
+You will now define your own function. You will define the function `shout` which takes a string argument and prints out that string, appended with `'!!!'`.
 
 *** =instructions
 - Complete the function header by replacing the `_____` with the appropriate function name, `shout`.
@@ -208,7 +208,7 @@ Let's modify the `shout()` function you wrote earlier to reflect a similar behav
 
 *** =instructions
 - The function `shout()`, which you wrote earlier, is shown. Replace the `print` statement with the appropriate `return` statement.
-- Concatenate the string '!!!' to word and assign to shout_word
+- Concatenate the string `'!!!'` to word and assign to shout_word
 - Call the `shout` function, passing to it the string, `help`, and assigning the call to the variable, `yell`.
 - To check if `yell` contains the value returned by `shout()`, print the value of `yell`
 
@@ -323,8 +323,8 @@ Let's modify the `shout()` function to accept two arguments.
 
 *** =instructions
 - The function `shout()`, which you wrote earlier, is shown. Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
-- Concatenate the string `!!!` to word1 and assign to `shout1`
-- Concatenate the string `!!!` to word2 and assign to `shout2`
+- Concatenate the string `'!!!'` to word1 and assign to `shout1`
+- Concatenate the string `'!!!'` to word2 and assign to `shout2`
 - Now, concatenate `shout1` and `shout2` together, in that order, and assign to `new_shout`
 - Return the value of `new_shout`
 - Pass the strings `'help'` and `'fire'`, in that order, to a call to `shout()`. Assign the return value to `yell`.
@@ -433,14 +433,20 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
-We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing *tuples*.
+We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing _tuples_.
 
 A tuple is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
 
-Tuples are constructed using a set of parentheses, and adding elements inside the parentheses, separated by commas, like so:
+Tuples are defined somewhat like lists. While lists use brackets `[]`, tuples are constructed using a set of parentheses `()`. You can add elements inside the parentheses as you do with lists, and then separate them with commas, like so:
 `(2, 4, 6)`
 
-You can assign a tuple to a variable like usual: `even_nums = (2, 4, 6)`. Or _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. 
+You can assign a tuple to a variable like usual: 
+
+```
+even_nums = (2, 4, 6)
+```. 
+
+You can also _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. Doing so means that you assign to the variables _a_, _b_, and _c_ the tuple values, in the order that they appear in the tuple. This means that after _unpacking_, the following assignments are made: `a = 2`, `b = 4`, and `c = 6`.
 
 If you assigned the tuple `(2, 4, 6)` to the variable `even_nums`, you can unpack `even_nums` into several variables too: `a, b, c = even_nums`.
 
