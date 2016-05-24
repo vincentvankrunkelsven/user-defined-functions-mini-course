@@ -1,8 +1,8 @@
 title                : User-defined Functions Mini Course
 author_field         : franciscastro
-description          : This is an automatically generated demo course which will help you on your way to create an awesome DataCamp course.
+description          : Learn to develop your own functions
 author_bio           : franciscastro is an awesome DataCamp course creator.<br>You can tell something about yourself <strong>here</strong>.
 university           : DataCamp
-difficulty_level     : 2
+difficulty_level     : 1
 time_needed          : 1 hour
 programming_language : python
