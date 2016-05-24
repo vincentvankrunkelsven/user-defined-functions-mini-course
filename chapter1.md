@@ -351,7 +351,9 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
-We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing tuples.
+We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing *tuples*.
+
+A tuple is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
