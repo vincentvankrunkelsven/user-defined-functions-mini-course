@@ -204,7 +204,7 @@ num = square(4)
 
 In the example above, the value _4_ was passed to `square()`. Because `square()` returns a value, the call is assigned to the variable `num`, which receives whatever value that the call to `square()` returns.
 
-Let's modify the `shout()` function, which you wrote earlier, to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
+Let's modify the `shout()` function you wrote earlier to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
@@ -233,32 +233,32 @@ import numpy as np
 
 *** =sample_code
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout, which accepts the parameter word
+def shout ( word ):
 
-# Import matplotlib.pyplot
+    # Paste the '!!!' string to word and assign to shout_word
+    shout_word = word + '!!!'
 
+    # Replace the print statement with the appropriate return statement
+    print( shout_word )
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-
-
-# Show the plot
+# Call shout with the string 'help' and assign the result to yell
 
 ```
 
 *** =solution
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout, which accepts the parameter word
+def shout ( word ):
 
-# Import matplotlib.pyplot
-import matplotlib.pyplot as plt
+    # Paste the '!!!' string to word and assign to shout_word
+    shout_word = word + '!!!'
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
+    # Replace the print statement with the appropriate return statement
+    return shout_word
 
-# Show the plot
-plt.show()
+# Call shout with the string 'help' and assign the result to yell
+yell = shout( 'help' )
 ```
 
 *** =sct
