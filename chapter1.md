@@ -459,7 +459,7 @@ num1, num2, num3 = new_tup
 What would be the values of `num1`, `num2`, and `num3`?
 
 *** =instructions
-- `num1` is blah
+- `num1`, `num2`, and `num3` will all have the same value of `(11, 22, 33)`
 - Test
 - Test
 
