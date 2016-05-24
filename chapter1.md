@@ -444,9 +444,9 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
 ## Write a function that returns multiple values
 
-Do you remember the plot of the last exercise? Let's make an even cooler plot!
+In the previous exercise, we've seen how you can use tuples to make your functions return multiple values.
 
-A dataset of movies, `movies`, is available in the workspace.
+Here you'll modify the ___ function so that it returns more than one value when called.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
