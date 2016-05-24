@@ -430,7 +430,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1  key:ee3e217dd9
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
 We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing _tuples_.
@@ -448,94 +448,55 @@ even_nums = (2, 4, 6)
 
 You can also _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. Doing so means that you assign to the variables _a_, _b_, and _c_ the tuple values, in the order that they appear in the tuple. This means that after _unpacking_, the following assignments are made: `a = 2`, `b = 4`, and `c = 6`.
 
-If you assigned the tuple `(2, 4, 6)` to the variable `even_nums`, you can unpack `even_nums` into several variables too: `a, b, c = even_nums`.
+Suppose the following assignments are made:
+
+```
+new_tup = (11, 22, 33)
+
+num1, num2, num3 = new_tup
+```
+
+What would be the values of `num1`, `num2`, and `num3`?
 
 *** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
+- `num1`, `num2`, and `num3` will all have the same value of `(11, 22, 33)`
+- `num1`, `num2`, and `num3` will all have the value of `11`
+- `num1` is 11, `num2` is 22, and `num3` is 33
+- The values cannot be determined
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+Try to remember what _unpacking_ a tuple means.
 
 *** =pre_exercise_code
-```{python}
+```{r}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
-# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
+# 1. Pre-load packages, so that users don't have to do this manually.
 import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 2. Preload a package
-import numpy as np
-```
-
-*** =sample_code
-```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
-
-# Import matplotlib.pyplot
-
-
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-
-
-# Show the plot
-
-```
-
-*** =solution
-```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
-
-# Import matplotlib.pyplot
 import matplotlib.pyplot as plt
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
+# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
+# The movies variable will be available in the user's console.
+movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
-# Show the plot
-plt.show()
+# 3. Create a plot in the viewer, that students can check out while reading the exercise
+#plt.scatter(movies.runtime, movies.rating)
+#plt.show()
 ```
 
 *** =sct
-```{python}
+```{r}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
-# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+# pythonwhat Python package
 
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
+msg_bad = "That is not correct!"
+msg_success = "Exactly! The correlation is very weak though."
 
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
-
-success_msg("Great work!")
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success]) 
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
