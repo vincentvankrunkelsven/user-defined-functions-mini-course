@@ -74,7 +74,7 @@ Let's create a function that squares a number. The function name `square` is per
 
 ```def square():```
 
-To complete the function definition, let's complete the _function body_ by squaring a value, say 4, and printing the output:
+The code above is called a _function header_, which shows the keyword `def`, followed by the name of the function. You will add to this later. To complete the function definition, let's complete the _function body_ by squaring a value, say 4, and printing the output:
 
 ```
 def square():
@@ -94,11 +94,14 @@ def square( value ):
 
 Our function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
 
+You will now define your own function. You will define the function `shout` which takes a string argument and prints out that string, appended with `!!!`.
+
 *** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
+- Complete the function header by replacing the `_____` with the appropriate function name, `shout`.
+- For the function parameter, replace the `_____` with the parameter name, `word`.
+- In the function body, replace the `_____` with the appropriate parameter. Assign the result to the variable `shout_word`.
+- Print the value of `shout_word`.
+- Call the `shout` function, passing to it the string, `help`.
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
@@ -121,16 +124,15 @@ import numpy as np
 
 *** =sample_code
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout, which accepts the parameter word
+def _____ ( _____ ):
 
-# Import matplotlib.pyplot
+    # Paste the '!!!' string to word and assign to shout_word
 
+    # Print the value of shout_word
+    print( _____ )
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-
-
-# Show the plot
+# Call shout, with the string 'help'
 
 ```
 
