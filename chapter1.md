@@ -207,10 +207,8 @@ In the example above, the value _4_ was passed to `square()`. Because `square()`
 Let's modify the `shout()` function you wrote earlier to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
 
 *** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
+- The function `shout()`, which you wrote earlier, is shown. Replace the `print` statement with the appropriate `return` statement.
+- Call the `shout` function, passing to it the string, `help`, and assigning the call to the variable, `yell`.
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
