@@ -61,7 +61,11 @@ test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
 
 While built-in Python functions are cool, you will need functions that have functionality specific to your needs. Fortunately, you can define your own functions in Python!
 
-To start a function definition, begin with the keyword `def` followed by a function name and a set of parentheses.
+To start a function definition, begin with the keyword `def` followed by a function name and a set of parentheses. We'll use `shout` for the function name in this example.
+
+`
+def shout ()
+`
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
