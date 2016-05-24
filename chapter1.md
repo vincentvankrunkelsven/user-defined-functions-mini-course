@@ -78,13 +78,21 @@ To complete the function definition, let's complete the _function body_ by squar
 
 ```
 def square():
-    squared_value = 4 ** 2
-    print( squared_value )
+    new_value = 4 ** 2
+    print( new_value )
 ```
 
-You can call the function as you do with pre-build functions: `square()`. 
+You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
 
-This isn't as helpful, though. What if we wanted to square any other number besides 4? To do that, we add a _parameter_ to the function. A parameter allows the user of the function to _pass values_ to the function so the function can process different values. 
+This isn't as helpful, though. What if we wanted to square any other number besides 4? To do that, we add a _parameter_ to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. Let's do that with our `square` function:
+
+```
+def square( value ):
+    new_value = value ** 2
+    print( new_value )
+```
+
+Our function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
