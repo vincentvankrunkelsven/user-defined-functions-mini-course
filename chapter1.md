@@ -188,13 +188,23 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
 
-We've defined a function `shout` that appends `!!!` to any string passed to it and prints the new string. But what if we don't want to print the string directly and instead just return the value of the new string? We can have our function return the new string by adding in the variable containing the new string to the `return` statement in the function.
+We've defined a function `square` that accepts a single parameter and prints out its squared value. But what if we don't want to print the value directly and instead just return the squared value and assign it to some variable? We can have our function return the new value by adding the `return` statement, followed by the value or variable to return.
 
 ```
-def shout( word ):
-    new_word = word + '!!!'
-    return new_word
+def square( value ):
+    new_value = value ** 2
+    return new_value
 ```
+
+Now that our `square` function returns the value instead of printing it, calling the function requires that you assign the result of the function to a variable so you can use the result later. Here's an example of how to do this:
+
+```
+num = square(4)
+```
+
+In the example above, the value _4_ was passed to `square()`. Because `square()` returns a value, the call is assigned to the variable `num`, which receives whatever value that the call to `square()` returns.
+
+Let's modify the `shout()` function, which you wrote earlier, to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
