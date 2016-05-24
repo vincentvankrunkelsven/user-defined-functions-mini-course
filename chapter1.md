@@ -99,7 +99,7 @@ You will now define your own function. You will define the function `shout` whic
 *** =instructions
 - Complete the function header by replacing the `_____` with the appropriate function name, `shout`.
 - For the function parameter, replace the `_____` with the parameter name, `word`.
-- In the function body, replace the `_____` with the appropriate parameter. Assign the result to the variable `shout_word`.
+- In the function body, replace the appropriate `_____` with the `word` parameter. Assign the result to the variable `shout_word`.
 - Print the value of `shout_word`.
 - Call the `shout` function, passing to it the string, `help`.
 
@@ -128,6 +128,7 @@ import numpy as np
 def _____ ( _____ ):
 
     # Paste the '!!!' string to word and assign to shout_word
+    _____ = _____ + '!!!'
 
     # Print the value of shout_word
     print( _____ )
@@ -138,17 +139,17 @@ def _____ ( _____ ):
 
 *** =solution
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout, which accepts the parameter word
+def shout ( word ):
 
-# Import matplotlib.pyplot
-import matplotlib.pyplot as plt
+    # Paste the '!!!' string to word and assign to shout_word
+    shout_word = word + '!!!'
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
+    # Print the value of shout_word
+    print( shout_word )
 
-# Show the plot
-plt.show()
+# Call shout, with the string 'help'
+shout( 'help' )
 ```
 
 *** =sct
