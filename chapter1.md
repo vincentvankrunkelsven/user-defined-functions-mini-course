@@ -13,7 +13,7 @@ attachments :
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
+You've learned to use built-in functions in Python such as ```print()```, ```type()```, and ```str()```
 
 *** =instructions
 - Long movies, clearly
