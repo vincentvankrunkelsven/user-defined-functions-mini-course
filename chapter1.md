@@ -302,9 +302,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
-Let's tweak our function a little bit. Suppose we wanted our function to append one string to another, but those strings will be up to the user of the function. We can do this by having our function accept two parameters instead of just one. For this example, let's say the two arguments are `string1` and `string2`.
-
-Doing so now lets us pass two values when we call the function.
+Let's tweak our `square` function a little bit more. Suppose that instead of simply squaring a value, we'd like to raise a value to another value that's also passed to the function. We can do this by having our function accept two parameters instead of just one. We should also change our function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
