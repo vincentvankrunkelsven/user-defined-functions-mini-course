@@ -74,12 +74,17 @@ Let's create a function that squares a number. The function name `square` is per
 
 ```def square():```
 
-To complete the function definition, let's complete the _function body_ by squaring a value, say 4:
+To complete the function definition, let's complete the _function body_ by squaring a value, say 4, and printing the output:
 
 ```
 def square():
-    4 ** 2
+    squared_value = 4 ** 2
+    print( squared_value )
 ```
+
+You can call the function as you do with pre-build functions: `square()`. 
+
+This isn't as helpful, though. What if we wanted to square any other number besides 4? To do that, we add a _parameter_ to the function. A parameter allows the user of the function to _pass values_ to the function so the function can process different values. 
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
