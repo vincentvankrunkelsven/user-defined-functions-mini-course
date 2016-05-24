@@ -444,7 +444,7 @@ You can assign a tuple to a variable like usual:
 
 ```
 even_nums = (2, 4, 6)
-```. 
+```
 
 You can also _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. Doing so means that you assign to the variables _a_, _b_, and _c_ the tuple values, in the order that they appear in the tuple. This means that after _unpacking_, the following assignments are made: `a = 2`, `b = 4`, and `c = 6`.
 
