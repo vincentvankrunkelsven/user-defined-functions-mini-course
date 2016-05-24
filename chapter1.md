@@ -209,6 +209,7 @@ Let's modify the `shout()` function you wrote earlier to reflect a similar behav
 *** =instructions
 - The function `shout()`, which you wrote earlier, is shown. Replace the `print` statement with the appropriate `return` statement.
 - Call the `shout` function, passing to it the string, `help`, and assigning the call to the variable, `yell`.
+- To check if `yell` contains the value returned by `shout()`, print the value of `yell`
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
@@ -242,6 +243,9 @@ def shout ( word ):
 
 # Call shout with the string 'help' and assign the result to yell
 
+
+# Print the value of yell
+
 ```
 
 *** =solution
@@ -257,6 +261,9 @@ def shout ( word ):
 
 # Call shout with the string 'help' and assign the result to yell
 yell = shout( 'help' )
+
+# Print the value of yell
+print( yell )
 ```
 
 *** =sct
