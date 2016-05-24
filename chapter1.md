@@ -460,8 +460,8 @@ What would be the values of `num1`, `num2`, and `num3`?
 
 *** =instructions
 - `num1`, `num2`, and `num3` will all have the same value of `(11, 22, 33)`
-- Test
-- Test
+- `num1`, `num2`, and `num3` will all have the value of `11`
+- `num1` is 11, `num2` is 22, and `num3` is 33
 
 *** =hint
 Try to remember what _unpacking_ a tuple does.
