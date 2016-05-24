@@ -1,11 +1,11 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
+title       : User-defined Functions
+description : Recall prior knowledge on how to use functions and learn to develop your own functions
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:VideoExercise lang:python xp:50 skills:1 key:9a600c4910
-## Introduction
+## Introduction to user-defined functions
 
 *** =video_link
 //player.vimeo.com/video/154783078
