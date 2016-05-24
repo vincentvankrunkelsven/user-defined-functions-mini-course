@@ -158,9 +158,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
 
-Do you remember the plot of the last exercise? Let's make an even cooler plot!
-
-A dataset of movies, `movies`, is available in the workspace.
+We've defined a function `shout` that appends `!!!` to any string passed to it and prints the new string. But what if we don't want to print the string directly and instead just return the value of the new string? We can have our function return the new string by 
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
