@@ -256,9 +256,9 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
-Let's tweak our function a little bit. Suppose we wanted our function to append one string to another, but those strings will be up to the user of the function. We can do this by having our function accept two arguments instead of just one. For this example, let's say the two arguments are `string1` and `string2`.
+Let's tweak our function a little bit. Suppose we wanted our function to append one string to another, but those strings will be up to the user of the function. We can do this by having our function accept two parameters instead of just one. For this example, let's say the two arguments are `string1` and `string2`.
 
-A dataset of movies, `movies`, is available in the workspace.
+Doing so now lets us pass two values when we call the function.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
@@ -351,9 +351,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
-Do you remember the plot of the last exercise? Let's make an even cooler plot!
-
-A dataset of movies, `movies`, is available in the workspace.
+We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing tuples.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
