@@ -1,0 +1,28 @@
+- chapter_title: Recall and Introduction to Writing Functions
+  chapter_description: Recall prior knowledge on how to use (pre-built) functions and learn to develop your own functions
+  exercises:
+  -   type    : MultipleChoiceExercise
+      title   : Recapping the use of functions
+      content : Introduction and recall on the use of functions
+  
+  -   type    : NormalExercise
+      title   : Writing simple functions that take an argument
+      content : Write a function that does not return a value
+      
+  -   type    : NormalExercise
+      title   : Writing simple functions that return a single value
+      content : Write a function that returns a value
+
+  -   type    : NormalExercise
+      title   : Writing simple functions that accept multiple arguments
+      content : Write a function that accepts multiple arguments and returns one value
+
+  -   type    : NormalExercise
+      title   : A brief introduction to tuples
+      content : Construct a tuple
+  
+  -   type    : NormalExercise
+      title   : Write a function that returns multiple values
+      content : Write a function that accepts one argument and returns multiple values
+
+
