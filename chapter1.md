@@ -13,7 +13,7 @@ attachments :
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
 
-You've learned to use built-in functions in Python such as ```print()```, ```type()```, and ```str()```.
+You've learned to use built-in functions in Python such as `print()`, `type()`, and `str()`.
 
 We know that `print()` accepts a string (or a set of strings) and prints the string out into the console. The `type()` function accepts an object and returns the type of that object. The `str()` function accepts an object and returns the string representation of that object.
 
@@ -160,10 +160,11 @@ success_msg("Great work!")
 
 We've defined a function `shout` that appends `!!!` to any string passed to it and prints the new string. But what if we don't want to print the string directly and instead just return the value of the new string? We can have our function return the new string by adding in the variable containing the new string to the `return` statement in the function.
 
-`def shout( word ):
+```
+def shout( word ):
     new_word = word + '!!!'
     return new_word
-`
+```
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
