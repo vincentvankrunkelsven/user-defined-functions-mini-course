@@ -13,7 +13,7 @@ attachments :
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
 
-You've learned to use built-in functions in Python such as ```print()```, ```type()```, and ```str()```
+You've learned to use built-in functions in Python such as ```print()```, ```type()```, and ```str()```.
 
 *** =instructions
 - Long movies, clearly
@@ -161,7 +161,7 @@ success_msg("Great work!")
 We've defined a function `shout` that appends `!!!` to any string passed to it and prints the new string. But what if we don't want to print the string directly and instead just return the value of the new string? We can have our function return the new string by adding in the variable containing the new string to the `return` statement in the function.
 
 `def shout( word ):
-    new_word = word.append('!!!')
+    new_word = word + '!!!'
     return new_word
 `
 
@@ -256,7 +256,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
-Do you remember the plot of the last exercise? Let's make an even cooler plot!
+Let's tweak our function a little bit. Suppose we wanted our function to append one string to another, but those strings will be up to the user of the function. We can do this by having our function accept two arguments instead of just one. For this example, let's say the two arguments are `string1` and `string2`.
 
 A dataset of movies, `movies`, is available in the workspace.
 
