@@ -151,7 +151,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 
+--- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
 
 Do you remember the plot of the last exercise? Let's make an even cooler plot!
@@ -246,7 +246,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 
+--- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
 Do you remember the plot of the last exercise? Let's make an even cooler plot!
@@ -341,7 +341,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 
+--- type:NormalExercise lang:python xp:100 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
 Do you remember the plot of the last exercise? Let's make an even cooler plot!
@@ -436,7 +436,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 
+--- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
 ## Write a function that returns multiple values
 
 Do you remember the plot of the last exercise? Let's make an even cooler plot!
