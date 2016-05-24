@@ -319,11 +319,16 @@ The function is called by passing in _two_ arguments. The order in which the arg
 
 `value1` would contain 2 and `value2` would contain 3. Looking at the function body, this means that the computation `value1 ** value2` translates to `2 ** 3`. The function should return the value, 8.
 
-Let's modify the `shout` function to accept two arguments.
+Let's modify the `shout()` function to accept two arguments.
 
 *** =instructions
 - The function `shout()`, which you wrote earlier, is shown. Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
-- 
+- Concatenate the string `!!!` to word1 and assign to `shout1`
+- Concatenate the string `!!!` to word2 and assign to `shout2`
+- Now, concatenate `shout1` and `shout2` together, in that order, and assign to `new_shout`
+- Return the value of `new_shout`
+- Pass the strings `'help'` and `'fire'`, in that order, to a call to `shout()`. Assign the return value to `yell`.
+- Print the value of `yell`
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
