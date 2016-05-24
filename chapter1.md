@@ -435,7 +435,7 @@ success_msg("Great work!")
 
 We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing _tuples_.
 
-A tuple is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
+A _tuple_ is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
 
 Tuples are defined somewhat like lists. While lists use brackets `[]`, tuples are constructed using a set of parentheses `()`. You can add elements inside the parentheses as you do with lists, and then separate them with commas, like so:
 `(2, 4, 6)`
@@ -502,9 +502,22 @@ test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
 --- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
 ## Write a function that returns multiple values
 
-In the previous exercise, we've seen how you can use tuples to make your functions return multiple values.
+In the previous exercise, you've seen how to construct tuples, assign tuples to variables, and unpack tuples. Here you will learn how to return mutiple values from a function using tuples.
 
-Here you'll modify the ___ function so that it returns more than one value when called.
+Let's modify the behavior of our `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, let's also return the value of `value2` raised to the power of `value1`. We thus need to make our function return _two_ values instead of one. We will use tuples to do so:
+
+```
+def raise( value1, value2 ):
+    
+    new_value1 = value1 ** value2
+    new_value2 = value2 ** value1
+    
+    new_tup = ( new_value1, new_value2 )
+    
+    return new_tup
+```
+
+Looking at the modifications to our `raise()` function, we notice that in addition to the `value1 ** value2` computation, we also compute `value2 ** value1`. We then construct a tuple, which is composed of the results in `new_value1` and `new_value2`. Lastly, the tuple is returned, which now contains our two new values.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
