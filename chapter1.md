@@ -519,11 +519,12 @@ def raise( value1, value2 ):
 
 Looking at the modifications to our `raise()` function, we notice that in addition to the `value1 ** value2` computation, we also compute `value2 ** value1`. We then construct a tuple, which is composed of the results in `new_value1` and `new_value2`. Lastly, the tuple is returned, which now contains our two new values.
 
+Let's now update our `shout()` function to return multiple values using tuples. Instead of returning just one string, we will return two strings with the string `!!!` concatenated to each. 
+
 *** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
+- Change the function name from `shout` to `shout_all`.
+- Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
+- Concatenate the string `'!!!'` to word1 and assign to `shout1`
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
