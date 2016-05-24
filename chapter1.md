@@ -127,7 +127,7 @@ import numpy as np
 # Define the function shout, which accepts the parameter word
 def _____ ( _____ ):
 
-    # Paste the '!!!' string to word and assign to shout_word
+    # Concatenate the '!!!' string to word and assign to shout_word
     _____ = _____ + '!!!'
 
     # Print the value of shout_word
@@ -142,7 +142,7 @@ def _____ ( _____ ):
 # Define the function shout, which accepts the parameter word
 def shout ( word ):
 
-    # Paste the '!!!' string to word and assign to shout_word
+    # Concatenate the '!!!' string to word and assign to shout_word
     shout_word = word + '!!!'
 
     # Print the value of shout_word
@@ -208,6 +208,7 @@ Let's modify the `shout()` function you wrote earlier to reflect a similar behav
 
 *** =instructions
 - The function `shout()`, which you wrote earlier, is shown. Replace the `print` statement with the appropriate `return` statement.
+- Concatenate the string '!!!' to word and assign to shout_word
 - Call the `shout` function, passing to it the string, `help`, and assigning the call to the variable, `yell`.
 - To check if `yell` contains the value returned by `shout()`, print the value of `yell`
 
@@ -235,8 +236,8 @@ import numpy as np
 # Define the function shout, which accepts the parameter word
 def shout ( word ):
 
-    # Paste the '!!!' string to word and assign to shout_word
-    shout_word = word + '!!!'
+    # Concatenate the string '!!!' to word and assign to shout_word
+    
 
     # Replace the print statement with the appropriate return statement
     print( shout_word )
@@ -253,7 +254,7 @@ def shout ( word ):
 # Define the function shout, which accepts the parameter word
 def shout ( word ):
 
-    # Paste the '!!!' string to word and assign to shout_word
+    # Concatenate the string '!!!' to word and assign to shout_word
     shout_word = word + '!!!'
 
     # Replace the print statement with the appropriate return statement
@@ -303,6 +304,20 @@ success_msg("Great work!")
 ## Writing simple functions that accept multiple arguments
 
 Let's tweak our `square` function a little bit more. Suppose that instead of simply squaring a value, we'd like to raise a value to another value that's also passed to the function. We can do this by having our function accept two parameters instead of just one. We should also change our function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
+
+```
+def raise( value1, value2 ):
+    new_value = value1 ** value2
+    return new_value
+```
+
+Notice that there are now _two_ parameters in the function header instead of one, `value1` and `value2`. In the line after that, we also changed the behavior of the overall function by raising `value1` to the power of `value2`.
+
+The function is called by passing in _two_ arguments. The order in which the arguments are passed correspond to the order of the parameters in the function header. This means that when the following call is made:
+
+``` raise( 2, 3 )```
+
+`value1` would contain 2 and `value2` would contain 8. Looking at the function body, this means that the computation `value1 ** value2` translates to `2 ** 3`. The function should return the value, 8.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
