@@ -351,7 +351,14 @@ success_msg("Great work!")
 
 We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing *tuples*.
 
-A tuple is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple.
+A tuple is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
+
+Tuples are constructed using a set of parentheses, and adding elements inside the parentheses, separated by commas, like so:
+`(2, 4, 6)`
+
+You can assign a tuple to a variable like usual: `even_nums = (2, 4, 6)`. Or _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. 
+
+If you assigned the tuple `(2, 4, 6)` to the variable `even_nums`, you can unpack `even_nums` into several variables too: `a, b, c = even_nums`.
 
 *** =instructions
 - The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
