@@ -99,7 +99,7 @@ What are the types of `x`, `y1`, and `y2`?
 - They are all `None` types.
 
 *** =hint
-Recall the return values of the `print()` and `int()` functions.
+- Recall the return values of the `print()` and `str()` functions.
 
 *** =pre_exercise_code
 ```{r}
@@ -151,10 +151,8 @@ Define a function, `shout`, which simply prints out a string, concatenated with 
 - Call the `shout` function.
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- You concatenate strings with the use of the `+` operator.
+- The recipe for calling functions is _function name_`(`_parameters_`)`.
 
 *** =pre_exercise_code
 ```{python}
