@@ -84,16 +84,16 @@ In the example above, the value _4_ was passed to `square()`. Because `square()`
 
 For this exercise, a variable `x` has been preloaded. In the IPython shell, do the following:
 
-- Assign `int(x)` to a variable `y1`: `y1 = int(x)`
+- Assign `str(x)` to a variable `y1`: `y1 = str(x)`
 - Assign `print(x)` to a variable `y2`: `y2 = print(x)`
 - Recall the function `type()`. Use it to check out the types of `x`, `y1`, and `y2`.
 
 What are the types of `x`, `y1`, and `y2`?
 
 *** =instructions
-- They are all `float` types.
-- `x` is an `int`, `y1` is an `int`, and `y2` is a `float`.
-- `x` is a `float`, `y1` is an `int`, and `y2` is a `NoneType`.
+- They are all `str` types.
+- `x` is a `float`, `y1` is an `float`, and `y2` is a `str`.
+- `x` is a `float`, `y1` is a `str`, and `y2` is a `NoneType`.
 - They are all `None` types.
 
 *** =hint
