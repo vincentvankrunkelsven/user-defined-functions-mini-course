@@ -430,7 +430,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1  key:ee3e217dd9
+--- type:NormalExercise lang:python xp:50 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
 We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing _tuples_.
@@ -459,44 +459,112 @@ num1, num2, num3 = new_tup
 What would be the values of `num1`, `num2`, and `num3`?
 
 *** =instructions
-- `num1`, `num2`, and `num3` will all have the same value of `(11, 22, 33)`
-- `num1`, `num2`, and `num3` will all have the value of `11`
-- `num1` is 11, `num2` is 22, and `num3` is 33
-- The values cannot be determined
+- The function `shout()`, which you wrote earlier, is shown. Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
+- Concatenate the string `'!!!'` to word1 and assign to `shout1`
+- Concatenate the string `'!!!'` to word2 and assign to `shout2`
+- Now, concatenate `shout1` and `shout2` together, in that order, and assign to `new_shout`
+- Return the value of `new_shout`
+- Pass the strings `'help'` and `'fire'`, in that order, to a call to `shout()`. Assign the return value to `yell`.
+- Print the value of `yell`
 
 *** =hint
-Try to remember what _unpacking_ a tuple does.
+- You don't have to program anything for the first instruction, just take a look at the first line of code.
+- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
+- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
+- You'll always have to type in `plt.show()` to show the plot you created.
 
 *** =pre_exercise_code
-```{r}
+```{python}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
+# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
 # The movies variable will be available in the user's console.
+import pandas as pd
 movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-#plt.scatter(movies.runtime, movies.rating)
-#plt.show()
+# 2. Preload a package
+import numpy as np
+```
+
+*** =sample_code
+```{python}
+# Define the function shout, which accepts the parameters word1 and word2
+def _____ ( _____, _____ ):
+
+    # Concatenate the string '!!!' to word1 and assign to shout1
+    
+    
+    # Concatenate the string '!!!' to word2 and assign to shout2
+    
+    
+    # Concatenate word2 to word1 and assign to new_shout
+    
+
+    # Return new_shout
+    
+
+# Call shout with the strings 'help' and 'fire' and assign the result to yell
+
+
+# Print the value of yell
+
+```
+
+*** =solution
+```{python}
+# Define the function shout, which accepts the parameters word1 and word2
+def shout ( word1, word2 ):
+
+    # Concatenate the string '!!!' to word1 and assign to shout1
+    shout1 = word1 + '!!!'
+    
+    # Concatenate the string '!!!' to word2 and assign to shout2
+    shout2 = word2 + '!!!'
+    
+    # Concatenate word2 to word1 and assign to new_shout
+    new_shout = word1 + word2
+
+    # Return new_shout
+    return new_shout
+
+# Call shout with the strings 'help' and 'fire' and assign the result to yell
+yell = shout( 'help', 'fire' )
+
+# Print the value of yell
+print( yell )
 ```
 
 *** =sct
-```{r}
+```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
-# pythonwhat Python package
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
+# Check if the student changed the np.unique() call
+# If it's not called, we know the student removed the call.
+# If it's called incorrectly, we know the student changed the call.
+test_function("numpy.unique",
+              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
+              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
+# Check if the student removed the ints object
+test_object("ints",
+            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
+            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
 
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success]) 
+# Check if the student imported matplotlib.pyplot like the solution
+# Let automatic feedback message generation handle the feedback messages
+test_import("matplotlib.pyplot", same_as = True)
+
+# Check whether the student used the scatter() function correctly
+# If it's used, but incorrectly, tell them to check the instructions again
+test_function("matplotlib.pyplot.scatter",
+              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
+
+# Check if the student called the show() function
+# Let automatic feedback message generation handle all feedback messages
+test_function("matplotlib.pyplot.show")
+
+success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
