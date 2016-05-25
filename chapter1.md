@@ -49,7 +49,7 @@ def square():
 
 You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
 
-This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a **parameter** to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. You can do that with the `square` function by putting a parameter, say, `value` in between the parentheses:
+This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a **parameter** to the function in between the parentheses. A parameter allows the user of the function to _pass arguments_ to the function so it can process different values. For example:
 
 ```
 def square(value):
@@ -82,7 +82,9 @@ In the example above, the value _4_ was passed to `square()`. Because `square()`
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
 
-For this exercise, a variable `x` has been preloaded. In the IPython shell, do the following:
+Let's do a recap of what you know about using built-in functions. For this exercise, a variable `x` has been preloaded. 
+
+In the IPython shell, do the following:
 
 - Assign `str(x)` to a variable `y1`: `y1 = str(x)`
 - Assign `print(x)` to a variable `y2`: `y2 = print(x)`
@@ -134,16 +136,118 @@ msg_success = "Exactly! The correlation is very weak though."
 test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success]) 
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:3d1bbbef0d
-## Writing simple functions that take an argument
 
-You will now define your own function. 
+--- type:NormalExercise lang:python xp:100 skills:1 key:
+## Writing a simple function
 
-You will define the function `shout` which takes a string argument and prints out that string, appended with `'!!!'`.
+In the last lecture, Francisco described the basics of how to define a function. You will now write your own function!
+
+Define a function, `shout`, which simply prints out a string, concatenated with `'!!!'`.
 
 *** =instructions
-- Complete the function header by replacing the `_____` with the appropriate function name, `shout`.
-- For the function parameter, replace the `_____` with the parameter name, `word`.
+- Complete the function header by adding the appropriate function name, `shout`.
+- In the function body, concatenate the string, `'help'` with another string, `'!!!'`. Assign the result to `shout_word`.
+- Print the value of `shout_word`.
+- Call the `shout` function.
+
+*** =hint
+- You don't have to program anything for the first instruction, just take a look at the first line of code.
+- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
+- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
+- You'll always have to type in `plt.show()` to show the plot you created.
+
+*** =pre_exercise_code
+```{python}
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
+# The movies variable will be available in the user's console.
+import pandas as pd
+movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
+
+# 2. Preload a package
+import numpy as np
+```
+
+*** =sample_code
+```{python}
+# Define the function shout
+def _____():
+
+    # Concatenate the string 'help' to '!!!' and assign to shout_word
+    
+
+    # Print the value of shout_word
+    print(_____)
+
+# Call shout
+
+```
+
+*** =solution
+```{python}
+# Define the function shout
+def shout():
+
+    # Concatenate the string 'help' to '!!!' and assign to shout_word
+    shout_word = 'help' + '!!!'
+
+    # Print the value of shout_word
+    print(shout_word)
+
+# Call shout
+shout()
+```
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Check if the student changed the np.unique() call
+# If it's not called, we know the student removed the call.
+# If it's called incorrectly, we know the student changed the call.
+test_function("numpy.unique",
+              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
+              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
+# Check if the student removed the ints object
+test_object("ints",
+            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
+            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
+
+# Check if the student imported matplotlib.pyplot like the solution
+# Let automatic feedback message generation handle the feedback messages
+test_import("matplotlib.pyplot", same_as = True)
+
+# Check whether the student used the scatter() function correctly
+# If it's used, but incorrectly, tell them to check the instructions again
+test_function("matplotlib.pyplot.scatter",
+              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
+
+# Check if the student called the show() function
+# Let automatic feedback message generation handle all feedback messages
+test_function("matplotlib.pyplot.show")
+
+success_msg("Great work!")
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:3d1bbbef0d
+## Writing a simple function that takes an argument
+
+In the previous exercise, you defined and called the function `shout()`, which printed out a string appended with `'!!!'`.
+
+```
+def shout():
+    shout_word = 'help' + '!!!'
+    print(shout_word)
+```
+
+You will now update `shout()` by adding a _parameter_ so that it can accept and process any string passed to it.
+
+*** =instructions
+- Complete the function header by adding the parameter name, `word`.
 - In the function body, replace the appropriate `_____` with the `word` parameter. Assign the result to the variable `shout_word`.
 - Print the value of `shout_word`.
 - Call the `shout` function, passing to it the string, `help`.
@@ -170,9 +274,9 @@ import numpy as np
 *** =sample_code
 ```{python}
 # Define the function shout, which accepts the parameter word
-def _____ (_____):
+def shout(_____):
 
-    # Concatenate the '!!!' string to word and assign to shout_word
+    # Concatenate the string in word with '!!!' and assign to shout_word
     _____ = _____ + '!!!'
 
     # Print the value of shout_word
@@ -185,9 +289,9 @@ def _____ (_____):
 *** =solution
 ```{python}
 # Define the function shout, which accepts the parameter word
-def shout (word):
+def shout(word):
 
-    # Concatenate the '!!!' string to word and assign to shout_word
+    # Concatenate the string in word with '!!!' and assign to shout_word
     shout_word = word + '!!!'
 
     # Print the value of shout_word
