@@ -460,7 +460,7 @@ raise(2, 3)
 
 ***Returning multiple values***
 
-You've seen how you can pass multiple arguments to functions you've defined, as well as have your function return a single value. You can also make your function return multiple values instead of just one. You can do that by constructing _tuples_.
+You've seen how you can pass multiple arguments to functions you've defined, as return a single values from your functions. You can also make your function return multiple values instead of just one. You can do that by constructing _tuples_.
 
 A _tuple_ is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
 
@@ -480,7 +480,7 @@ Additionally, you can also access individual tuple elements like you do with lis
 even_nums[1]
 ```
 
-Let's modify the behavior of your `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, also return the value of `value2` raised to the power of `value1`. You thus need to make your function return _two_ values instead of one. You will use tuples to do so:
+Let's modify the behavior of your `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, let's also return the value of `value2` raised to the power of `value1`. You thus need to make `raise()` return _two_ values instead of one. Tuples can be used to do so:
 
 ```
 def raise(value1, value2):
@@ -493,7 +493,7 @@ def raise(value1, value2):
     return new_tup
 ```
 
-Looking at the modifications to `raise()`. Notice that in addition to the `value1 ** value2` computation, you also compute `value2 ** value1`. A tuple is then constructed, composed of the results in `new_value1` and `new_value2`. Lastly, the tuple is returned, which now contains our two new values.
+Looking at the modifications to `raise()`. Notice that in addition to the `value1 ** value2` computation, you also compute `value2 ** value1`. A tuple is then constructed, composed of the results in `new_value1` and `new_value2`, and assigned to `new_tup`. Lastly, the tuple is returned, which now contains our two new values.
 
 *** =video_link
 //player.vimeo.com/video/154783078
@@ -502,22 +502,21 @@ Looking at the modifications to `raise()`. Notice that in addition to the `value
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
-Modify the `shout()` function to accept two arguments.
+Francisco discussed the use of multiple parameters in functions in the last lecture. You are now going to use what you've learned to modify the `shout()` function further.
+
+Here, you will modify `shout()` to accept two arguments. Parts of the function `shout()`, which you wrote earlier, is shown.
 
 *** =instructions
-- The function `shout()`, which you wrote earlier, is shown. Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
-- Concatenate the string `'!!!'` to word1 and assign to `shout1`
-- Concatenate the string `'!!!'` to word2 and assign to `shout2`
-- Now, concatenate `shout1` and `shout2` together, in that order, and assign to `new_shout`
-- Return the value of `new_shout`
+- Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
+- Concatenate each of `word1` and `word2` with `'!!!'` and assign to `shout1` and `shout2`, respectively.
+- Concatenate `shout1` and `shout2` together, in that order, and assign to `new_shout`.
 - Pass the strings `'help'` and `'fire'`, in that order, to a call to `shout()`. Assign the return value to `yell`.
-- Print the value of `yell`
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- Make sure that `word1` and `word2` are in the right order.
+- Don't forget to concatenate `shout1` and `shout2`, in that order, for the return value.
+- Make sure to return the `new_shout`.
+- Make sure that `yell` receives the output from the call to `shout()`.
 
 *** =pre_exercise_code
 ```{python}
@@ -535,40 +534,40 @@ import numpy as np
 *** =sample_code
 ```{python}
 # Define the function shout, which accepts the parameters word1 and word2
-def _____ (_____, _____):
+def shout(_____, _____):
 
-    # Concatenate the string '!!!' to word1 and assign to shout1
+    # Concatenate word1 with '!!!' and assign to shout1
     
     
-    # Concatenate the string '!!!' to word2 and assign to shout2
+    # Concatenate word2 with '!!!' and assign to shout2
     
     
-    # Concatenate word2 to word1 and assign to new_shout
+    # Concatenate shout1 with shout2 and assign to new_shout
     
 
     # Return new_shout
-    
+    return new_shout
 
 # Call shout with the strings 'help' and 'fire' and assign the result to yell
 
 
 # Print the value of yell
-
+print(yell)
 ```
 
 *** =solution
 ```{python}
 # Define the function shout, which accepts the parameters word1 and word2
-def shout (word1, word2):
+def shout(word1, word2):
 
-    # Concatenate the string '!!!' to word1 and assign to shout1
+    # Concatenate word1 with '!!!' and assign to shout1
     shout1 = word1 + '!!!'
     
-    # Concatenate the string '!!!' to word2 and assign to shout2
+    # Concatenate word2 with '!!!' and assign to shout2
     shout2 = word2 + '!!!'
     
-    # Concatenate word2 to word1 and assign to new_shout
-    new_shout = word1 + word2
+    # Concatenate shout1 with shout2 and assign to new_shout
+    new_shout = shout1 + shout2
 
     # Return new_shout
     return new_shout
