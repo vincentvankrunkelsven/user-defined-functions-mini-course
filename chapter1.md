@@ -102,7 +102,7 @@ The code above is called a _function header_, which shows the keyword `def`, fol
 ```
 def square():
     new_value = 4 ** 2
-    print( new_value )
+    print(new_value)
 ```
 
 You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
@@ -110,9 +110,9 @@ You can call the function as you do with pre-built functions: `square()`. This s
 This isn't as helpful, though. What if we wanted to square any other number besides 4? To do that, we add a _parameter_ to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. Let's do that with our `square` function:
 
 ```
-def square( value ):
+def square(value):
     new_value = value ** 2
-    print( new_value )
+    print(new_value)
 ```
 
 Our function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
@@ -148,13 +148,13 @@ import numpy as np
 *** =sample_code
 ```{python}
 # Define the function shout, which accepts the parameter word
-def _____ ( _____ ):
+def _____ (_____):
 
     # Concatenate the '!!!' string to word and assign to shout_word
     _____ = _____ + '!!!'
 
     # Print the value of shout_word
-    print( _____ )
+    print(_____)
 
 # Call shout, with the string 'help'
 
@@ -163,16 +163,16 @@ def _____ ( _____ ):
 *** =solution
 ```{python}
 # Define the function shout, which accepts the parameter word
-def shout ( word ):
+def shout (word):
 
     # Concatenate the '!!!' string to word and assign to shout_word
     shout_word = word + '!!!'
 
     # Print the value of shout_word
-    print( shout_word )
+    print(shout_word)
 
 # Call shout, with the string 'help'
-shout( 'help' )
+shout('help')
 ```
 
 *** =sct
@@ -214,7 +214,7 @@ success_msg("Great work!")
 We've defined a function `square` that accepts a single parameter and prints out its squared value. But what if we don't want to print the value directly and instead just return the squared value and assign it to some variable? We can have our function return the new value by adding the `return` statement, followed by the value or variable to return.
 
 ```
-def square( value ):
+def square(value):
     new_value = value ** 2
     return new_value
 ```
@@ -257,13 +257,13 @@ import numpy as np
 *** =sample_code
 ```{python}
 # Define the function shout, which accepts the parameter word
-def shout ( word ):
+def shout (word):
 
     # Concatenate the string '!!!' to word and assign to shout_word
     
 
     # Replace the print statement with the appropriate return statement
-    print( shout_word )
+    print(shout_word)
 
 # Call shout with the string 'help' and assign the result to yell
 
@@ -275,7 +275,7 @@ def shout ( word ):
 *** =solution
 ```{python}
 # Define the function shout, which accepts the parameter word
-def shout ( word ):
+def shout (word):
 
     # Concatenate the string '!!!' to word and assign to shout_word
     shout_word = word + '!!!'
@@ -284,10 +284,10 @@ def shout ( word ):
     return shout_word
 
 # Call shout with the string 'help' and assign the result to yell
-yell = shout( 'help' )
+yell = shout('help')
 
 # Print the value of yell
-print( yell )
+print(yell)
 ```
 
 *** =sct
@@ -329,7 +329,7 @@ success_msg("Great work!")
 Let's tweak our `square` function a little bit more. Suppose that instead of simply squaring a value, we'd like to _raise_ a value to another value that's also passed to the function. We can do this by having our function accept two parameters instead of just one. We should also change our function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
 
 ```
-def raise( value1, value2 ):
+def raise(value1, value2):
     new_value = value1 ** value2
     return new_value
 ```
@@ -338,7 +338,7 @@ Notice that there are now _two_ parameters in the function header instead of one
 
 The function is called by passing in _two_ arguments. The order in which the arguments are passed correspond to the order of the parameters in the function header. This means that when the following call is made:
 
-``` raise( 2, 3 )```
+``` raise(2, 3)```
 
 `value1` would contain 2 and `value2` would contain 3. Looking at the function body, this means that the computation `value1 ** value2` translates to `2 ** 3`. The function should return the value, 8.
 
@@ -375,7 +375,7 @@ import numpy as np
 *** =sample_code
 ```{python}
 # Define the function shout, which accepts the parameters word1 and word2
-def _____ ( _____, _____ ):
+def _____ (_____, _____):
 
     # Concatenate the string '!!!' to word1 and assign to shout1
     
@@ -399,7 +399,7 @@ def _____ ( _____, _____ ):
 *** =solution
 ```{python}
 # Define the function shout, which accepts the parameters word1 and word2
-def shout ( word1, word2 ):
+def shout (word1, word2):
 
     # Concatenate the string '!!!' to word1 and assign to shout1
     shout1 = word1 + '!!!'
@@ -414,10 +414,10 @@ def shout ( word1, word2 ):
     return new_shout
 
 # Call shout with the strings 'help' and 'fire' and assign the result to yell
-yell = shout( 'help', 'fire' )
+yell = shout('help', 'fire')
 
 # Print the value of yell
-print( yell )
+print(yell)
 ```
 
 *** =sct
