@@ -507,24 +507,24 @@ In the previous exercise, you've seen how to construct tuples, assign tuples to 
 Let's modify the behavior of our `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, let's also return the value of `value2` raised to the power of `value1`. We thus need to make our function return _two_ values instead of one. We will use tuples to do so:
 
 ```
-def raise( value1, value2 ):
+def raise(value1, value2):
     
     new_value1 = value1 ** value2
     new_value2 = value2 ** value1
     
-    new_tup = ( new_value1, new_value2 )
+    new_tup = (new_value1, new_value2)
     
     return new_tup
 ```
 
-Looking at the modifications to our `raise()` function, we notice that in addition to the `value1 ** value2` computation, we also compute `value2 ** value1`. We then construct a tuple, which is composed of the results in `new_value1` and `new_value2`. Lastly, the tuple is returned, which now contains our two new values.
+Looking at the modifications to `raise()`. Notice that in addition to the `value1 ** value2` computation, we also compute `value2 ** value1`. A tuple is then constructed, composed of the results in `new_value1` and `new_value2`. Lastly, the tuple is returned, which now contains our two new values.
 
 Let's now update our `shout()` function to return multiple values using tuples. Instead of returning just one string, we will return two strings with the string `!!!` concatenated to each. 
 
 *** =instructions
-- Change the function name from `shout` to `shout_all`.
-- Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
-- Concatenate the string `'!!!'` to word1 and assign to `shout1`
+- Modify the function header such that the function name is now `shout_all` and that it accepts two parameters, `word1` and `word2`, in that order.
+- Concatenate the string `'!!!'` to each of `word1` and `word2` and assign to `shout1` and `shout2`, respectively.
+
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
@@ -547,32 +547,52 @@ import numpy as np
 
 *** =sample_code
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout_all, which accepts the parameters word1 and word2
+def shout_all(word1, word2):
 
-# Import matplotlib.pyplot
+    # Concatenate the string '!!!' to word1 and assign to shout1
+    shout1 = word1 + '!!!'
+    
+    # Concatenate the string '!!!' to word2 and assign to shout2
+    shout2 = word2 + '!!!'
+    
+    # Construct a tuple, shout_words, that contains shout1 and shout2
+    shout_words = (shout1, shout2)
 
+    # Return shout_words
+    return shout_words
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
+# Call shout with the strings 'help' and 'fire' and assign the result to yell1 and yell2
+yell1, yell2 = shout_all('help', 'fire')
 
-
-# Show the plot
-
+# Print the values of yell1 and yell2
+print(yell1)
+print(yell2)
 ```
 
 *** =solution
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Define the function shout_all, which accepts the parameters word1 and word2
+def shout_all(word1, word2):
 
-# Import matplotlib.pyplot
-import matplotlib.pyplot as plt
+    # Concatenate the string '!!!' to word1 and assign to shout1
+    shout1 = word1 + '!!!'
+    
+    # Concatenate the string '!!!' to word2 and assign to shout2
+    shout2 = word2 + '!!!'
+    
+    # Construct a tuple, shout_words, that contains shout1 and shout2
+    shout_words = (shout1, shout2)
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
+    # Return shout_words
+    return shout_words
 
-# Show the plot
-plt.show()
+# Call shout with the strings 'help' and 'fire' and assign the result to yell1 and yell2
+yell1, yell2 = shout_all('help', 'fire')
+
+# Print the values of yell1 and yell2
+print(yell1)
+print(yell2)
 ```
 
 *** =sct
