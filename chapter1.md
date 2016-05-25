@@ -27,7 +27,7 @@ The `int()` function accepts an object such as a number or string and returns an
 a_number = int('5')
 ```
 
-Unlike `int()`, the return value of `print()` is `None`, which basically means that it doesn't have a return value.
+Unlike `int()`, the return value of `print()` is `NoneType`, which basically means that it doesn't have a return value.
 
 For this exercise, a variable `x` has been preloaded. In the IPython shell, do the following:
 
@@ -40,7 +40,7 @@ What are the types of `x`, `y1`, and `y2`?
 *** =instructions
 - They are all `float` types.
 - `x` is an `int`, `y1` is an `int`, and `y2` is a `float`.
-- `x` is a `float`, `y1` is an `int`, and `y2` is a `None`.
+- `x` is a `float`, `y1` is an `int`, and `y2` is a `NoneType`.
 - They are all `None` types.
 
 *** =hint
