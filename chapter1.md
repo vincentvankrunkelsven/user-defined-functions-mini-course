@@ -23,6 +23,9 @@ a_number = int('5')
 
 Unlike `int()`, the return value of `print()` is `NoneType`, which basically means that it doesn't have a return value.
 
+*** =video_link
+//player.vimeo.com/video/154783078
+
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
