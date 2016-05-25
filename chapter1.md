@@ -23,6 +23,41 @@ a_number = int('5')
 
 Unlike `int()`, the return value of `print()` is `NoneType`, which basically means that it doesn't have a return value.
 
+**Writing your own function**
+
+While built-in Python functions are cool, you will need functions that have functionality specific to your needs. Fortunately, you can define your own functions in Python!
+
+To start a function definition, 
+
+- begin with the keyword `def`, 
+- followed by a _function name_, 
+- a set of _parentheses_ `()`, 
+- and a _colon_ `:`. 
+ 
+Create a function that squares a number. The function name `square` is perfect for this. Following the steps above, you will get the following:
+
+```def square():```
+
+The code above is called a _function header_, which shows the keyword `def`, followed by the name of the function. You will add to this later. To complete the function definition, complete the _function body_ by squaring a value, say 4, and printing the output:
+
+```
+def square():
+    new_value = 4 ** 2
+    print(new_value)
+```
+
+You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
+
+This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a _parameter_ to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. Let's do that with the `square` function:
+
+```
+def square(value):
+    new_value = value ** 2
+    print(new_value)
+```
+
+Your function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
+
 *** =video_link
 //player.vimeo.com/video/154783078
 
@@ -85,40 +120,9 @@ test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
 --- type:NormalExercise lang:python xp:100 skills:1 key:3d1bbbef0d
 ## Writing simple functions that take an argument
 
-While built-in Python functions are cool, you will need functions that have functionality specific to your needs. Fortunately, you can define your own functions in Python!
+You will now define your own function. 
 
-To start a function definition, 
-
-- begin with the keyword `def`, 
-- followed by a _function name_, 
-- a set of _parentheses_ `()`, 
-- and a _colon_ `:`. 
- 
-Create a function that squares a number. The function name `square` is perfect for this. Following the steps above, you will get the following:
-
-```def square():```
-
-The code above is called a _function header_, which shows the keyword `def`, followed by the name of the function. You will add to this later. To complete the function definition, complete the _function body_ by squaring a value, say 4, and printing the output:
-
-```
-def square():
-    new_value = 4 ** 2
-    print(new_value)
-```
-
-You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
-
-This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a _parameter_ to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. Let's do that with the `square` function:
-
-```
-def square(value):
-    new_value = value ** 2
-    print(new_value)
-```
-
-Your function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
-
-You will now define your own function. You will define the function `shout` which takes a string argument and prints out that string, appended with `'!!!'`.
+You will define the function `shout` which takes a string argument and prints out that string, appended with `'!!!'`.
 
 *** =instructions
 - Complete the function header by replacing the `_____` with the appropriate function name, `shout`.
