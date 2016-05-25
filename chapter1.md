@@ -58,6 +58,22 @@ def square(value):
 
 Your function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
 
+You've defined a function `square` that accepts a single parameter and prints out its squared value. But what if you don't want to print the value directly and instead just return the squared value and assign it to some variable? You can have your function return the new value by adding the `return` statement, followed by the value or variable to return.
+
+```
+def square(value):
+    new_value = value ** 2
+    return new_value
+```
+
+Now that your `square` function returns the value instead of printing it, calling the function requires that you assign the result of the function to a variable so you can use the result later. Here's an example of how to do this:
+
+```
+num = square(4)
+```
+
+In the example above, the value _4_ was passed to `square()`. Because `square()` returns a value, the call is assigned to the variable `num`, which receives whatever value that the call to `square()` returns.
+
 *** =video_link
 //player.vimeo.com/video/154783078
 
@@ -215,22 +231,6 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
-
-You've defined a function `square` that accepts a single parameter and prints out its squared value. But what if you don't want to print the value directly and instead just return the squared value and assign it to some variable? You can have your function return the new value by adding the `return` statement, followed by the value or variable to return.
-
-```
-def square(value):
-    new_value = value ** 2
-    return new_value
-```
-
-Now that your `square` function returns the value instead of printing it, calling the function requires that you assign the result of the function to a variable so you can use the result later. Here's an example of how to do this:
-
-```
-num = square(4)
-```
-
-In the example above, the value _4_ was passed to `square()`. Because `square()` returns a value, the call is assigned to the variable `num`, which receives whatever value that the call to `square()` returns.
 
 Modify the `shout()` function you wrote earlier to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
 
