@@ -137,7 +137,7 @@ test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:
+--- type:NormalExercise lang:python xp:100 skills:1 key: key:22ba90bcbd
 ## Writing a simple function
 
 In the last lecture, Francisco described the basics of how to define a function. You will now write your own function!
