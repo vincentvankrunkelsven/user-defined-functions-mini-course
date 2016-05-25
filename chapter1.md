@@ -7,21 +7,22 @@ attachments :
 --- type:VideoExercise lang:python xp:50 skills:1 key:9a600c4910
 ## Introduction to user-defined functions
 
-You've learned to use built-in functions in Python such as `print()` and `int()`.
+You've learned how to use built-in functions in Python such as `print()` and `str()`.
 
-You know that `print()` accepts a string (or a set of strings) and prints the string out into the shell. For example:
+Recall that `print()` accepts a string (or a set of strings) and prints the string out into the shell. For example:
 
 ```
 print('Hello DataCamp!')
 ```
 
-The `int()` function accepts an object such as a number or string and returns an integer object. You can assign a call to `int()` to a variable to store its return value.
+The `str()` function accepts an object such as a number and returns a string object. You can assign a call to `str()` to a variable to store its return value.
 
 ```
-a_number = int('5')
+a_number = str(5)
 ```
 
-Unlike `int()`, the return value of `print()` is `NoneType`, which basically means that it doesn't have a return value.
+Unlike `str()`, the return value of `print()` is `NoneType`, which basically means that it doesn't have a return value.
+
 
 **Writing your own function**
 
@@ -34,11 +35,11 @@ To start a function definition,
 - a set of _parentheses_ `()`, 
 - and a _colon_ `:`. 
  
-Create a function that squares a number. The function name `square` is perfect for this. Following the steps above, you will get the following:
+Let's define a function that squares a number. The function name `square` is perfect for this. Following the steps above, you will get the following:
 
 ```def square():```
 
-The code above is called a _function header_, which shows the keyword `def`, followed by the name of the function. You will add to this later. To complete the function definition, complete the _function body_ by squaring a value, say 4, and printing the output:
+The code above is called a **function header**, which shows the keyword `def`, followed by the name of the function. You will add to this later. To complete the function definition, complete the _function body_ by squaring a value, say 4, and printing the output:
 
 ```
 def square():
@@ -48,7 +49,7 @@ def square():
 
 You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
 
-This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a _parameter_ to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. Let's do that with the `square` function:
+This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a **parameter** to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. You can do that with the `square` function by putting a parameter, say, `value` in between the parentheses:
 
 ```
 def square(value):
@@ -58,7 +59,7 @@ def square(value):
 
 Your function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
 
-You've defined a function `square` that accepts a single parameter and prints out its squared value. But what if you don't want to print the value directly and instead just return the squared value and assign it to some variable? You can have your function return the new value by adding the `return` statement, followed by the value or variable to return.
+You've now defined a function `square` that accepts a single parameter and prints out its squared value. But what if you don't want to print that value directly and instead just return the squared value and assign it to some variable? You can have your function return the new value by adding the `return` statement, followed by the value or variable to return.
 
 ```
 def square(value):
@@ -66,7 +67,7 @@ def square(value):
     return new_value
 ```
 
-Now that your `square` function returns the value instead of printing it, calling the function requires that you assign the result of the function to a variable so you can use the result later. Here's an example of how to do this:
+Now your `square` function returns the value instead of printing it. This means that calling the function requires that you assign the result of the function to a variable. This allows you to use the result later. Here's an example of how to do this:
 
 ```
 num = square(4)
