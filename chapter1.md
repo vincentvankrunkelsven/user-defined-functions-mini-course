@@ -615,6 +615,8 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:50 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
+Alongside learning about functions, you've also learned about tuples! Here, you will practice what you've learned about tuples: how to construct, unpack, and access tuple elements.
+
 A three-element tuple named `nums` has been preloaded for this exercise.
 
 *** =instructions
@@ -623,10 +625,8 @@ A three-element tuple named `nums` has been preloaded for this exercise.
 - Construct a new tuple, `even_nums` composed of the same elements in `nums`, but with the odd-numbered elements replaced with the value, _2_. Use the variables `num1`, `num2`, and `num3` to unpack `nums`.
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- The number of elements in `nums` determines how many variables you'll need to unpack them to.
+- You construct tuples with _parentheses_ `()`.
 
 *** =pre_exercise_code
 ```{python}
