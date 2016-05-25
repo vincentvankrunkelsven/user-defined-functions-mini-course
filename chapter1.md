@@ -433,7 +433,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:VideoExercise lang:python xp:50 skills:1 key: key:929b1ddd2a
+--- type:VideoExercise lang:python xp:50 skills:1 key:1558296060:929b1ddd2a
 ## Multiple arguments and return values
 
 Let's tweak your `square` function a little bit more. Suppose that instead of simply squaring a value, you'd like to _raise_ a value to another value that's also passed to the function. You can do this by having your function accept two parameters instead of just one. You should also change your function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
