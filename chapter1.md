@@ -13,18 +13,38 @@ attachments :
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
 
-You've learned to use built-in functions in Python such as `print()` and `type()`.
+You've learned to use built-in functions in Python such as `print()` and `int()`.
 
-We know that `print()` accepts a string (or a set of strings) and prints the string out into the console. The `type()` function accepts an object and returns the type of that object.
+We know that `print()` accepts a string (or a set of strings) and prints the string out into the shell. For example:
+
+```
+print('Hello DataCamp!')
+```
+
+The `int()` function accepts an object such as a number or string and returns an integer object. You can assign a call to `int()` to a variable to store its return value.
+
+```
+a_number = int('5')
+```
+
+Unlike `int()`, the return value of `print()` is `None`, which basically means that it doesn't have a return value.
+
+For this exercise, a variable `x` has been preloaded. In the IPython shell, do the following:
+
+- Assign `int(x)` to a variable `y1`: `y1 = int(x)`
+- Assign `print(x)` to a variable `y2`: `y2 = print(x)`
+- Recall the function `type()`. Use it to check out the types of `x`, `y1`, and `y2`.
+
+What are the types of `x`, `y1`, and `y2`?
 
 *** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
+- They are all `float` types.
+- `x` is an `int`, `y1` is an `int`, and `y2` is a `float`.
+- `x` is a `float`, `y1` is an `int`, and `y2` is a `None`.
+- They are all `None` types.
 
 *** =hint
-Have a look at the plot. Do you see a trend in the dots?
+Recall the return values of the `print()` and `int()` functions.
 
 *** =pre_exercise_code
 ```{r}
@@ -41,6 +61,9 @@ movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introdu
 # 3. Create a plot in the viewer, that students can check out while reading the exercise
 #plt.scatter(movies.runtime, movies.rating)
 #plt.show()
+
+# 4. Preload variables and values
+x = 4.89
 ```
 
 *** =sct
