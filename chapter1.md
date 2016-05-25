@@ -448,24 +448,18 @@ even_nums = (2, 4, 6)
 
 You can also _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. Doing so means that you assign to the variables _a_, _b_, and _c_ the tuple values, in the order that they appear in the tuple. This means that after _unpacking_, the following assignments are made: `a = 2`, `b = 4`, and `c = 6`.
 
-Suppose the following assignments are made:
+Additionally, you can also access individual tuple elements like you do with lists: 
 
 ```
-new_tup = (11, 22, 33)
-
-num1, num2, num3 = new_tup
+even_nums[1]
 ```
 
-What would be the values of `num1`, `num2`, and `num3`?
+A three-element tuple named `nums` has been preloaded. 
 
 *** =instructions
-- The function `shout()`, which you wrote earlier, is shown. Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
-- Concatenate the string `'!!!'` to word1 and assign to `shout1`
-- Concatenate the string `'!!!'` to word2 and assign to `shout2`
-- Now, concatenate `shout1` and `shout2` together, in that order, and assign to `new_shout`
-- Return the value of `new_shout`
-- Pass the strings `'help'` and `'fire'`, in that order, to a call to `shout()`. Assign the return value to `yell`.
-- Print the value of `yell`
+- Print out the value of `nums` in the IPython shell. Note the elements in the tuple.
+- In the IPython shell, try to change the first element of `nums` to the value _2_ by doing an assignment: `nums[0] = 2`. What happens?
+- Construct a new tuple, `even_nums` composed of the same elements in `nums`, but with the odd-numbered elements replaced by the value, _2_. Use the variables `num1`, `num2`, and `num3` to unpack `nums`.
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
@@ -484,54 +478,27 @@ movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introdu
 
 # 2. Preload a package
 import numpy as np
+
+# 3. Preload variables and values
+nums = (3,4,6)
 ```
 
 *** =sample_code
 ```{python}
-# Define the function shout, which accepts the parameters word1 and word2
-def _____ ( _____, _____ ):
-
-    # Concatenate the string '!!!' to word1 and assign to shout1
-    
-    
-    # Concatenate the string '!!!' to word2 and assign to shout2
-    
-    
-    # Concatenate word2 to word1 and assign to new_shout
-    
-
-    # Return new_shout
-    
-
-# Call shout with the strings 'help' and 'fire' and assign the result to yell
+# Unpack the tuple nums into the variables num1, num2, and num3
 
 
-# Print the value of yell
+# Construct the tuple even_nums
 
 ```
 
 *** =solution
 ```{python}
-# Define the function shout, which accepts the parameters word1 and word2
-def shout ( word1, word2 ):
+# Unpack the tuple nums into the variables num1, num2, and num3
+num1, num2, num3 = nums
 
-    # Concatenate the string '!!!' to word1 and assign to shout1
-    shout1 = word1 + '!!!'
-    
-    # Concatenate the string '!!!' to word2 and assign to shout2
-    shout2 = word2 + '!!!'
-    
-    # Concatenate word2 to word1 and assign to new_shout
-    new_shout = word1 + word2
-
-    # Return new_shout
-    return new_shout
-
-# Call shout with the strings 'help' and 'fire' and assign the result to yell
-yell = shout( 'help', 'fire' )
-
-# Print the value of yell
-print( yell )
+# Construct the tuple even_nums
+even_nums = (2, num2, num3)
 ```
 
 *** =sct
