@@ -454,12 +454,12 @@ Additionally, you can also access individual tuple elements like you do with lis
 even_nums[1]
 ```
 
-A three-element tuple named `nums` has been preloaded. 
+A three-element tuple named `nums` has been preloaded for this exercise.
 
 *** =instructions
 - Print out the value of `nums` in the IPython shell. Note the elements in the tuple.
 - In the IPython shell, try to change the first element of `nums` to the value _2_ by doing an assignment: `nums[0] = 2`. What happens?
-- Construct a new tuple, `even_nums` composed of the same elements in `nums`, but with the odd-numbered elements replaced by the value, _2_. Use the variables `num1`, `num2`, and `num3` to unpack `nums`.
+- Construct a new tuple, `even_nums` composed of the same elements in `nums`, but with the odd-numbered elements replaced with the value, _2_. Use the variables `num1`, `num2`, and `num3` to unpack `nums`.
 
 *** =hint
 - You don't have to program anything for the first instruction, just take a look at the first line of code.
