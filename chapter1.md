@@ -371,7 +371,7 @@ import numpy as np
 # Define the function shout, which accepts the parameter word
 def shout (word):
 
-    # Concatenate the string in `word` with `'!!!'` and assign to `shout_word`
+    # Concatenate the string in word with '!!!' and assign to shout_word
     
 
     # Replace the print statement with the appropriate return statement
@@ -389,7 +389,7 @@ def shout (word):
 # Define the function shout, which accepts the parameter word
 def shout (word):
 
-    # Concatenate the string in `word` with `'!!!'` and assign to `shout_word`
+    # Concatenate the string in word with '!!!' and assign to shout_word
     shout_word = word + '!!!'
 
     # Replace the print statement with the appropriate return statement
@@ -438,7 +438,9 @@ success_msg("Great work!")
 --- type:VideoExercise lang:python xp:50 skills:1 key:1558296060:929b1ddd2a
 ## Multiple arguments and return values
 
-Let's tweak your `square` function a little bit more. Suppose that instead of simply squaring a value, you'd like to _raise_ a value to another value that's also passed to the function. You can do this by having your function accept two parameters instead of just one. You should also change your function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
+At this point, you already know how to define your own functions and even return values from them. That's great!
+
+Let's tweak the `square` function we've been working on a little bit more. Suppose that instead of simply squaring a value, you'd like to _raise_ a value to another value that's also passed to the function. You can do this by having your function accept two parameters instead of just one. You should also change your function name to reflect this new behavior. Let's use `raise` as an appropriate function name:
 
 ```
 def raise(value1, value2):
@@ -448,18 +450,21 @@ def raise(value1, value2):
 
 Notice that there are now _two_ parameters in the function header instead of one, `value1` and `value2`. In the line after that, the behavior of the overall function was also changed by raising `value1` to the power of `value2`.
 
-The function is called by passing in _two_ arguments. The order in which the arguments are passed correspond to the order of the parameters in the function header. This means that when the following call is made:
+You can call the function by passing in _two_ arguments. The order in which the arguments are passed correspond to the order of the parameters in the function header. This means that when the following call is made:
 
-``` raise(2, 3)```
+``` 
+raise(2, 3)
+```
 
 `value1` would contain 2 and `value2` would contain 3. Looking at the function body, this means that the computation `value1 ** value2` translates to `2 ** 3`. The function should return the value, 8.
 
-You've seen how you can pass multiple arguments to functions you've defined, as well as have your function return a value. You can also make your function return multiple values instead of just one. You can do that by constructing _tuples_.
+***Returning multiple values***
+
+You've seen how you can pass multiple arguments to functions you've defined, as well as have your function return a single value. You can also make your function return multiple values instead of just one. You can do that by constructing _tuples_.
 
 A _tuple_ is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
 
-Tuples are defined somewhat like lists. While lists use brackets `[]`, tuples are constructed using a set of parentheses `()`. You can add elements inside the parentheses as you do with lists, and then separate them with commas, like so:
-`(2, 4, 6)`
+Tuples are also defined somewhat like lists. While lists use brackets `[]`, tuples are constructed using a set of parentheses `()`. You can add elements inside the parentheses as you do with lists, and then separate them with commas, like so: `(2, 4, 6)`
 
 You can assign a tuple to a variable like usual: 
 
@@ -467,15 +472,13 @@ You can assign a tuple to a variable like usual:
 even_nums = (2, 4, 6)
 ```
 
-You can also _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. Doing so means that you assign to the variables _a_, _b_, and _c_ the tuple values, in the order that they appear in the tuple. This means that after _unpacking_, the following assignments are made: `a = 2`, `b = 4`, and `c = 6`.
+You can also _unpack_ a tuple into several variables in one line: `a, b, c = (2, 4, 6)`. Doing so means that you assign to the variables _a_, _b_, and _c_ the tuple values, in the order that they appear in the tuple. This means that after _unpacking_, you have the following variable assignments: `a = 2`, `b = 4`, and `c = 6`.
 
 Additionally, you can also access individual tuple elements like you do with lists: 
 
 ```
 even_nums[1]
 ```
-
-In the previous exercise, you've seen how to construct tuples, assign tuples to variables, and unpack tuples. Here you will learn how to return mutiple values from a function using tuples.
 
 Let's modify the behavior of your `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, also return the value of `value2` raised to the power of `value1`. You thus need to make your function return _two_ values instead of one. You will use tuples to do so:
 
@@ -696,7 +699,9 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
 ## Write a function that returns multiple values
 
-Let's now update our `shout()` function to return multiple values using tuples. Instead of returning just one string, we will return two strings with the string `!!!` concatenated to each. 
+In the previous exercise, you constructed tuples, assigned tuples to variables, and unpacked tuples. Here you will return mutiple values from a function using tuples.
+
+Let's now update our `shout()` function to return multiple values. Instead of returning just one string, we will return two strings with the string `!!!` concatenated to each. 
 
 *** =instructions
 - Modify the function header such that the function name is now `shout_all`, and it accepts two parameters, `word1` and `word2`, in that order.
