@@ -337,11 +337,13 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
 
-Modify the `shout()` function you wrote earlier to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
+You're getting very good at this. Try your hand at another modification to the `shout()` function!
+
+Modify the `shout()` function you wrote earlier such that instead of printing within the `shout()` function, you return a value instead. Parts of the function `shout()`, which you wrote earlier, is shown.
 
 *** =instructions
-- The function `shout()`, which you wrote earlier, is shown. Replace the `print` statement with the appropriate `return` statement.
-- Concatenate the string `'!!!'` to word and assign to shout_word
+- Concatenate the string in `word` with `'!!!'` and assign to `shout_word`
+- Replace the `print` statement with the appropriate `return` statement.
 - Call the `shout` function, passing to it the string, `help`, and assigning the call to the variable, `yell`.
 - To check if `yell` contains the value returned by `shout()`, print the value of `yell`
 
@@ -369,7 +371,7 @@ import numpy as np
 # Define the function shout, which accepts the parameter word
 def shout (word):
 
-    # Concatenate the string '!!!' to word and assign to shout_word
+    # Concatenate the string in `word` with `'!!!'` and assign to `shout_word`
     
 
     # Replace the print statement with the appropriate return statement
@@ -387,7 +389,7 @@ def shout (word):
 # Define the function shout, which accepts the parameter word
 def shout (word):
 
-    # Concatenate the string '!!!' to word and assign to shout_word
+    # Concatenate the string in `word` with `'!!!'` and assign to `shout_word`
     shout_word = word + '!!!'
 
     # Replace the print statement with the appropriate return statement
