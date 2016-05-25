@@ -323,7 +323,7 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
---- type:VideoExercise lang:python xp:50 skills:1 key:
+--- type:VideoExercise lang:python xp:50 skills:1 key: key:929b1ddd2a
 ## Multiple arguments and return values
 
 *** =video_link
