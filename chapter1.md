@@ -15,7 +15,7 @@ attachments :
 
 You've learned to use built-in functions in Python such as `print()` and `int()`.
 
-We know that `print()` accepts a string (or a set of strings) and prints the string out into the shell. For example:
+You know that `print()` accepts a string (or a set of strings) and prints the string out into the shell. For example:
 
 ```
 print('Hello DataCamp!')
@@ -93,11 +93,11 @@ To start a function definition,
 - a set of _parentheses_ `()`, 
 - and a _colon_ `:`. 
  
-Let's create a function that squares a number. The function name `square` is perfect for this. Following the steps above, we get the following:
+Create a function that squares a number. The function name `square` is perfect for this. Following the steps above, you will get the following:
 
 ```def square():```
 
-The code above is called a _function header_, which shows the keyword `def`, followed by the name of the function. You will add to this later. To complete the function definition, let's complete the _function body_ by squaring a value, say 4, and printing the output:
+The code above is called a _function header_, which shows the keyword `def`, followed by the name of the function. You will add to this later. To complete the function definition, complete the _function body_ by squaring a value, say 4, and printing the output:
 
 ```
 def square():
@@ -107,7 +107,7 @@ def square():
 
 You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
 
-This isn't as helpful, though. What if we wanted to square any other number besides 4? To do that, we add a _parameter_ to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. Let's do that with our `square` function:
+This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a _parameter_ to the function in between the parentheses. A parameter allows the user of the function to _pass values_ to the function so it can process different values. Let's do that with the `square` function:
 
 ```
 def square(value):
@@ -115,7 +115,7 @@ def square(value):
     print(new_value)
 ```
 
-Our function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
+Your function now has the `value` parameter, which accepts an argument passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
 
 You will now define your own function. You will define the function `shout` which takes a string argument and prints out that string, appended with `'!!!'`.
 
@@ -211,7 +211,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
 
-We've defined a function `square` that accepts a single parameter and prints out its squared value. But what if we don't want to print the value directly and instead just return the squared value and assign it to some variable? We can have our function return the new value by adding the `return` statement, followed by the value or variable to return.
+You've defined a function `square` that accepts a single parameter and prints out its squared value. But what if you don't want to print the value directly and instead just return the squared value and assign it to some variable? You can have your function return the new value by adding the `return` statement, followed by the value or variable to return.
 
 ```
 def square(value):
@@ -219,7 +219,7 @@ def square(value):
     return new_value
 ```
 
-Now that our `square` function returns the value instead of printing it, calling the function requires that you assign the result of the function to a variable so you can use the result later. Here's an example of how to do this:
+Now that your `square` function returns the value instead of printing it, calling the function requires that you assign the result of the function to a variable so you can use the result later. Here's an example of how to do this:
 
 ```
 num = square(4)
@@ -227,7 +227,7 @@ num = square(4)
 
 In the example above, the value _4_ was passed to `square()`. Because `square()` returns a value, the call is assigned to the variable `num`, which receives whatever value that the call to `square()` returns.
 
-Let's modify the `shout()` function you wrote earlier to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
+Modify the `shout()` function you wrote earlier to reflect a similar behavior. Instead of printing within the `shout()` function, return a value instead.
 
 *** =instructions
 - The function `shout()`, which you wrote earlier, is shown. Replace the `print` statement with the appropriate `return` statement.
@@ -323,10 +323,17 @@ test_function("matplotlib.pyplot.show")
 success_msg("Great work!")
 ```
 
+--- type:VideoExercise lang:python xp:50 skills:1 key:
+## Multiple arguments and return values
+
+*** =video_link
+//player.vimeo.com/video/154783078
+
+
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
-Let's tweak our `square` function a little bit more. Suppose that instead of simply squaring a value, we'd like to _raise_ a value to another value that's also passed to the function. We can do this by having our function accept two parameters instead of just one. We should also change our function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
+Let's tweak your `square` function a little bit more. Suppose that instead of simply squaring a value, you'd like to _raise_ a value to another value that's also passed to the function. You can do this by having your function accept two parameters instead of just one. You should also change your function name to reflect this new behavior. Let's use `raise` as an appropriate function name.
 
 ```
 def raise(value1, value2):
@@ -334,7 +341,7 @@ def raise(value1, value2):
     return new_value
 ```
 
-Notice that there are now _two_ parameters in the function header instead of one, `value1` and `value2`. In the line after that, we also changed the behavior of the overall function by raising `value1` to the power of `value2`.
+Notice that there are now _two_ parameters in the function header instead of one, `value1` and `value2`. In the line after that, the behavior of the overall function was also changed by raising `value1` to the power of `value2`.
 
 The function is called by passing in _two_ arguments. The order in which the arguments are passed correspond to the order of the parameters in the function header. This means that when the following call is made:
 
@@ -342,7 +349,7 @@ The function is called by passing in _two_ arguments. The order in which the arg
 
 `value1` would contain 2 and `value2` would contain 3. Looking at the function body, this means that the computation `value1 ** value2` translates to `2 ** 3`. The function should return the value, 8.
 
-Let's modify the `shout()` function to accept two arguments.
+Modify the `shout()` function to accept two arguments.
 
 *** =instructions
 - The function `shout()`, which you wrote earlier, is shown. Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
@@ -456,7 +463,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:50 skills:1  key:ee3e217dd9
 ## A brief introduction to tuples
 
-We've seen how we can pass multiple arguments to functions we've defined, as well as have our function return a value. We can also make our function return multiple values instead of just one. We do that by constructing _tuples_.
+You've seen how you can pass multiple arguments to functions you've defined, as well as have your function return a value. You can also make your function return multiple values instead of just one. You can do that by constructing _tuples_.
 
 A _tuple_ is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
 
@@ -562,7 +569,7 @@ success_msg("Great work!")
 
 In the previous exercise, you've seen how to construct tuples, assign tuples to variables, and unpack tuples. Here you will learn how to return mutiple values from a function using tuples.
 
-Let's modify the behavior of our `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, let's also return the value of `value2` raised to the power of `value1`. We thus need to make our function return _two_ values instead of one. We will use tuples to do so:
+Let's modify the behavior of our `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, also return the value of `value2` raised to the power of `value1`. You thus need to make your function return _two_ values instead of one. You will use tuples to do so:
 
 ```
 def raise(value1, value2):
@@ -575,7 +582,7 @@ def raise(value1, value2):
     return new_tup
 ```
 
-Looking at the modifications to `raise()`. Notice that in addition to the `value1 ** value2` computation, we also compute `value2 ** value1`. A tuple is then constructed, composed of the results in `new_value1` and `new_value2`. Lastly, the tuple is returned, which now contains our two new values.
+Looking at the modifications to `raise()`. Notice that in addition to the `value1 ** value2` computation, you also compute `value2 ** value1`. A tuple is then constructed, composed of the results in `new_value1` and `new_value2`. Lastly, the tuple is returned, which now contains our two new values.
 
 Let's now update our `shout()` function to return multiple values using tuples. Instead of returning just one string, we will return two strings with the string `!!!` concatenated to each. 
 
