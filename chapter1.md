@@ -360,9 +360,11 @@ success_msg("Great work!")
 --- type:VideoExercise lang:python xp:50 skills:1 key:1558296060:929b1ddd2a
 ## Multiple arguments and return values
 
-At this point, you already know how to define your own functions and even return values from them. That's great!
+Welcome back! You're doing pretty well at defining your own functions, good job!
 
-Let's tweak the `square` function we've been working on a little bit more. Suppose that instead of simply squaring a value, you'd like to _raise_ a value to another value that's also passed to the function. You can do this by having your function accept two parameters instead of just one. You should also change your function name to reflect this new behavior. Let's use `raise` as an appropriate function name:
+At this point, you already know how to define your own functions and even return values from them. What you'll learn next is how to pass multiple arguments to functions, as well as return not just one, but multiple values from them.
+
+Let's tweak the `square()` function we've been working on a little bit more. Suppose that instead of simply squaring a value, you'd like to _raise_ a value to the power of another value that's also passed to the function. You can do this by having your function accept two parameters instead of just one. You should also change your function name to reflect this new behavior. Let's use `raise` as an appropriate function name:
 
 ```
 def raise(value1, value2):
@@ -382,11 +384,14 @@ raise(2, 3)
 
 ***Returning multiple values***
 
-You've seen how you can pass multiple arguments to functions you've defined, as return a single values from your functions. You can also make your function return multiple values instead of just one. You can do that by constructing _tuples_.
+You've seen how you can pass multiple arguments to functions you've defined, as well as return single values from your functions. You can also make your function return multiple values instead of just one. You can do that by constructing objects known as _tuples_.
 
-A _tuple_ is like a list, in that it can contain multiple values. Unlike a list, however, a tuple is _immutable_, that is to say you cannot modify the values in a tuple once it has been constructed.
+A _tuple_ is like a list, in that it can contain multiple values. There are some differences, however: 
 
-Tuples are also defined somewhat like lists. While lists use brackets `[]`, tuples are constructed using a set of parentheses `()`. You can add elements inside the parentheses as you do with lists, and then separate them with commas, like so: `(2, 4, 6)`
+- Unlike a list, a tuple is _immutable_, that is, you cannot modify the values in a tuple once it has been constructed.
+- While lists are defined using brackets `[]`, tuples are constructed using a set of parentheses `()`. 
+
+You can add elements inside the parentheses as you do with lists, and then separate them with commas, like so: `(2, 4, 6)`
 
 You can assign a tuple to a variable like usual: 
 
@@ -402,7 +407,9 @@ Additionally, you can also access individual tuple elements like you do with lis
 even_nums[1]
 ```
 
-Let's modify the behavior of your `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, let's also return the value of `value2` raised to the power of `value1`. You thus need to make `raise()` return _two_ values instead of one. Tuples can be used to do so:
+Doing so accesses the second element of the tuple. Why is that? Recall that with lists, you can use _zero-indexing_ to access list elements. You can do the same thing with tuples! Pretty cool, right?
+
+Let's now modify the behavior of your `raise()` function. Instead of returning just the value of `value1` raised to the power of `value2`, let's also return the value of `value2` raised to the power of `value1`. You thus need to make `raise()` return _two_ values instead of one. Tuples can be used to do so:
 
 ```
 def raise(value1, value2):
@@ -424,7 +431,7 @@ Looking at the modifications to `raise()`. Notice that in addition to the `value
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
 ## Writing simple functions that accept multiple arguments
 
-Francisco discussed the use of multiple parameters in functions in the last lecture. You are now going to use what you've learned to modify the `shout()` function further.
+Francisco discussed the use of multiple parameters in defining functions in the last lecture. You are now going to use what you've learned to modify the `shout()` function further.
 
 Here, you will modify `shout()` to accept two arguments. Parts of the function `shout()`, which you wrote earlier, is shown.
 
@@ -432,7 +439,7 @@ Here, you will modify `shout()` to accept two arguments. Parts of the function `
 - Modify the function header such that it accepts two parameters, `word1` and `word2`, in that order.
 - Concatenate each of `word1` and `word2` with `'!!!'` and assign to `shout1` and `shout2`, respectively.
 - Concatenate `shout1` and `shout2` together, in that order, and assign to `new_shout`.
-- Pass the strings `'help'` and `'fire'`, in that order, to a call to `shout()`. Assign the return value to `yell`.
+- Pass the strings `'congratulations'` and `'you'`, in that order, to a call to `shout()`. Assign the return value to `yell`.
 
 *** =hint
 - Make sure that `word1` and `word2` are in the right order.
@@ -444,18 +451,15 @@ Here, you will modify `shout()` to accept two arguments. Parts of the function `
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
 # 2. Preload a package
-import numpy as np
+
 ```
 
 *** =sample_code
 ```{python}
 # Define the function shout, which accepts the parameters word1 and word2
-def shout(_____, _____):
+def shout(___, ___):
 
     # Concatenate word1 with '!!!' and assign to shout1
     
@@ -469,7 +473,7 @@ def shout(_____, _____):
     # Return new_shout
     return new_shout
 
-# Call shout with the strings 'help' and 'fire' and assign the result to yell
+# Call shout with the strings 'congratulations' and 'you' and assign the result to yell
 
 
 # Print the value of yell
@@ -493,8 +497,8 @@ def shout(word1, word2):
     # Return new_shout
     return new_shout
 
-# Call shout with the strings 'help' and 'fire' and assign the result to yell
-yell = shout('help', 'fire')
+# Call shout with the strings 'congratulations' and 'you' and assign the result to yell
+yell = shout('congratulations', 'you')
 
 # Print the value of yell
 print(yell)
@@ -505,30 +509,6 @@ print(yell)
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
-
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
-
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
 
 success_msg("Great work!")
 ```
@@ -603,7 +583,7 @@ Let's now update our `shout()` function to return multiple values. Instead of re
 - Modify the function header such that the function name is now `shout_all`, and it accepts two parameters, `word1` and `word2`, in that order.
 - Concatenate the string `'!!!'` to each of `word1` and `word2` and assign to `shout1` and `shout2`, respectively.
 - Construct a tuple `shout_words`, composed of `shout1` and `shout2`.
-- Call `shout_all` with the strings `'help'` and `'fire'` and assign the result to yell1 and yell2
+- Call `shout_all` with the strings `'congratulations'` and `'you'` and assign the result to yell1 and yell2
 
 
 *** =hint
@@ -617,18 +597,15 @@ Let's now update our `shout()` function to return multiple values. Instead of re
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
 # 2. Preload a package
-import numpy as np
+
 ```
 
 *** =sample_code
 ```{python}
 # Define the function shout_all, which accepts the parameters word1 and word2
-def shout(_____, _____):
+def shout(___, ___):
 
     # Concatenate the string '!!!' to word1 and assign to shout1
     
@@ -642,7 +619,7 @@ def shout(_____, _____):
     # Return shout_words
     return shout_words
 
-# Call shout_all with the strings 'help' and 'fire' and assign the result to yell1 and yell2
+# Call shout_all with the strings 'congratulations' and 'you' and assign the result to yell1 and yell2
 
 
 # Print the values of yell1 and yell2
@@ -667,8 +644,8 @@ def shout_all(word1, word2):
     # Return shout_words
     return shout_words
 
-# Call shout with the strings 'help' and 'fire' and assign the result to yell1 and yell2
-yell1, yell2 = shout_all('help', 'fire')
+# Call shout with the strings 'congratulations' and 'you' and assign the result to yell1 and yell2
+yell1, yell2 = shout_all('congratulations', 'you')
 
 # Print the values of yell1 and yell2
 print(yell1)
@@ -680,30 +657,6 @@ print(yell2)
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
-
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
-
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
 
 success_msg("Great work!")
 ```
