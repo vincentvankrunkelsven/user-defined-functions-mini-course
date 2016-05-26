@@ -116,7 +116,7 @@ test_mc(correct = 3,
         msgs = ["Nope!",
                 "Nope!",
                 "Correct!",
-                "Nope!])
+                "Nope!"])
 ```
 
 
