@@ -60,7 +60,7 @@ Right now, the `square()` function does not have any parameters within the `()`.
 
 You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
 
-This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a **parameter** to the function in between the parentheses. A parameter allows the user of the function to **pass arguments** to the function so it can process different values. 
+This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a **parameter** to the function in between the parentheses. A parameter allows the user of the function to pass **arguments** to the function so it can process different values. 
 
 A quick word on using _parameters_ vs. _arguments_:
 
