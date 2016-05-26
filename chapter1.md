@@ -143,7 +143,9 @@ test_mc(correct = 3,
 
 In the last lecture, Francisco described the basics of how to define a function. You will now write your own function!
 
-Define a function, `shout`, which simply prints out a string, concatenated with `'!!!'`.
+Define a function, `shout`, which simply prints out a string with three exclamation marks `'!!!'` at the end. 
+
+You will **concatenate** the string with the exclamation marks. Recall that you can do this with the `+` operator.
 
 *** =instructions
 - Complete the function header by adding the appropriate function name, `shout`.
@@ -152,8 +154,8 @@ Define a function, `shout`, which simply prints out a string, concatenated with 
 - Call the `shout` function.
 
 *** =hint
-- You concatenate strings with the use of the `+` operator.
-- The recipe for calling functions is _function name_`(`_parameters_`)`.
+- The recipe for concatenating two strings is: _string`_ `+` _string2_.
+- The recipe for calling functions without arguments is _function name_`()`.
 
 *** =pre_exercise_code
 ```{python}
@@ -171,15 +173,15 @@ import numpy as np
 *** =sample_code
 ```{python}
 # Define the function shout
-def _____():
+def ___():
 
     # Concatenate the string 'help' to '!!!' and assign to shout_word
     
 
     # Print the value of shout_word
-    print(_____)
+    print(___)
 
-# Call shout
+# Call the shout function
 
 ```
 
