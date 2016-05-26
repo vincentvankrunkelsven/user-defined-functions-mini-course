@@ -252,7 +252,7 @@ You will now update `shout()` by adding a _parameter_ so that it can accept and 
 
 *** =hint
 - Use the new parameter to form the new value to be assigned to `shout_word`.
-- When calling the `shout` function, use the format: _function name_`(`_argument_`)`.
+- Use the template: _function name_`(`_argument_`)` when calling the `shout` function
 
 *** =pre_exercise_code
 ```{python}
@@ -333,7 +333,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
 
-You're getting very good at this. Try your hand at another modification to the `shout()` function!
+You're getting very good at this! Try your hand at another modification to the `shout()` function.
 
 Modify the `shout()` function you wrote earlier such that instead of printing within the `shout()` function, you return a value instead. Parts of the function `shout()`, which you wrote earlier, is shown.
 
@@ -344,10 +344,8 @@ Modify the `shout()` function you wrote earlier such that instead of printing wi
 - To check if `yell` contains the value returned by `shout()`, print the value of `yell`
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- You concatenate strings with the use of the `+` operator.
+- Make sure that `yell` receives the output from the call to `shout()`.
 
 *** =pre_exercise_code
 ```{python}
@@ -510,8 +508,7 @@ Here, you will modify `shout()` to accept two arguments. Parts of the function `
 
 *** =hint
 - Make sure that `word1` and `word2` are in the right order.
-- Don't forget to concatenate `shout1` and `shout2`, in that order, for the return value.
-- Make sure to return the `new_shout`.
+- Don't forget to concatenate `shout1` and `shout2`, in that order, for the return variable.
 - Make sure that `yell` receives the output from the call to `shout()`.
 
 *** =pre_exercise_code
