@@ -203,17 +203,10 @@ shout()
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-test_function_definition(
-    "shout", 
-    arg_names = True,
-    body = lambda: test_function("print", 
-                                 args = [0], 
-                                 incorrect_msg = "you should use the print() function."))
+test_function_definition("shout", arg_names = True)
 
-test_function_definition(
-    "shout", 
-    arg_names = True,
-    body = lambda: test_object("shout_word"))
+test_function_definition("shout", arg_names = False # Already tested this
+    outputs = [(,'congratulations!!!')])
 
 # Test if shout() is called
 test_function("shout")
