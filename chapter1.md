@@ -149,7 +149,7 @@ You will **concatenate** the string with the exclamation marks. Recall that you 
 
 *** =instructions
 - Complete the function header by adding the appropriate function name, `shout`.
-- In the function body, concatenate the string, `'help'` with another string, `'!!!'`. Assign the result to `shout_word`.
+- In the function body, concatenate the string, `'congratulations'` with another string, `'!!!'`. Assign the result to `shout_word`.
 - Print the value of `shout_word`.
 - Call the `shout` function.
 
@@ -162,12 +162,9 @@ You will **concatenate** the string with the exclamation marks. Recall that you 
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
 # 2. Preload a package
-import numpy as np
+
 ```
 
 *** =sample_code
@@ -175,7 +172,7 @@ import numpy as np
 # Define the function shout
 def ___():
 
-    # Concatenate the string 'help' to '!!!' and assign to shout_word
+    # Concatenate the string 'congratulations' to '!!!' and assign to shout_word
     
 
     # Print the value of shout_word
@@ -190,13 +187,13 @@ def ___():
 # Define the function shout
 def shout():
 
-    # Concatenate the string 'help' to '!!!' and assign to shout_word
-    shout_word = 'help' + '!!!'
+    # Concatenate the string 'congratulations' to '!!!' and assign to shout_word
+    shout_word = 'congratulations' + '!!!'
 
     # Print the value of shout_word
     print(shout_word)
 
-# Call shout
+# Call the shout function
 shout()
 ```
 
@@ -206,30 +203,6 @@ shout()
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
-
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
-
 success_msg("Great work!")
 ```
 
@@ -237,51 +210,50 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:3d1bbbef0d
 ## Writing a simple function that takes an argument
 
-In the previous exercise, you defined and called the function `shout()`, which printed out a string appended with `'!!!'`.
+Congratulations! You have successfully defined _and_ called your own function! That's pretty cool.
+
+In the previous exercise, you defined and called the function `shout()`, which printed out a string concatenated with `'!!!'`.
 
 ```
 def shout():
-    shout_word = 'help' + '!!!'
+    shout_word = 'congratulations' + '!!!'
     print(shout_word)
 ```
 
-You will now update `shout()` by adding a _parameter_ so that it can accept and process any string passed to it.
+You will now update `shout()` by adding a _parameter_ so that it can accept and process any string _argument_ passed to it.
 
 *** =instructions
 - Complete the function header by adding the parameter name, `word`.
-- In the function body, replace the appropriate `_____` with the `word` parameter. Assign the result to the variable `shout_word`.
+- Assign the result of concatenating `word` with `'!!!'` to the variable `shout_word`.
 - Print the value of `shout_word`.
-- Call the `shout` function, passing to it the string, `help`.
+- Call the `shout` function, passing to it the string, `congratulations`.
 
 *** =hint
-- Use the new parameter to form the new value to be assigned to `shout_word`.
-- Use the template: _function name_`(`_argument_`)` when calling the `shout` function
+- Use the parameter `word` to form the new value to be assigned to `shout_word`.
+- Pass the argument `'congratulations'` to the function `shout`.
 
 *** =pre_exercise_code
 ```{python}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
 # 2. Preload a package
-import numpy as np
+
 ```
 
 *** =sample_code
 ```{python}
 # Define the function shout, which accepts the parameter word
-def shout(_____):
+def shout(___):
 
     # Concatenate the string in word with '!!!' and assign to shout_word
-    _____ = _____ + '!!!'
+    ___ = ___ + '!!!'
 
     # Print the value of shout_word
-    print(_____)
+    print(___)
 
-# Call shout, with the string 'help'
+# Call the shout function, with the string 'congratulations'
 
 ```
 
@@ -296,8 +268,8 @@ def shout(word):
     # Print the value of shout_word
     print(shout_word)
 
-# Call shout, with the string 'help'
-shout('help')
+# Call the shout function, with the string 'congratulations'
+shout('congratulations')
 ```
 
 *** =sct
