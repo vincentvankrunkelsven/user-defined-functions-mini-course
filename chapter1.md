@@ -102,26 +102,24 @@ You've now just learned the basics of defining your own functions! Now it's your
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
 ## Recapping the use of functions
 
-Let's do a recap of what you know about using built-in functions. For this exercise, a variable `x` has been preloaded. 
+Let's do a recap of what you know about using built-in functions. Here, you will use the `str()` and `print()` functions and figure out which function returns a value. A variable `x` has been preloaded for this exercise.
 
 In the IPython shell, do the following:
 
 - Assign `str(x)` to a variable `y1`: `y1 = str(x)`
 - Assign `print(x)` to a variable `y2`: `y2 = print(x)`
-- Recall the function `type()`. Use it to check out the types of `x`, `y1`, and `y2`.
+- Check the types of the variables `x`, `y1`, and `y2`.
 
 What are the types of `x`, `y1`, and `y2`?
-
-blah.
 
 *** =instructions
 - They are all `str` types.
 - `x` is a `float`, `y1` is an `float`, and `y2` is a `str`.
 - `x` is a `float`, `y1` is a `str`, and `y2` is a `NoneType`.
-- They are all `None` types.
+- They are all `NoneType` types.
 
 *** =hint
-- Recall the return values of the `print()` and `str()` functions.
+- Recall the function `type()` and use it to check the types of the variables.
 
 *** =pre_exercise_code
 ```{r}
@@ -133,7 +131,7 @@ x = 4.89
 *** =sct
 ```{python}
 test_mc(correct = 3, 
-        msgs = ["No, not all are strings. Use the type function to check!",
+        msgs = ["No, not all are strings. Use the `type()` function to check!",
                 "Not quite. What do `str()` and `print()` output again?",
                 "Correct!",
                 "No, not all are `NoneType`s. Use the type function to check!"])
