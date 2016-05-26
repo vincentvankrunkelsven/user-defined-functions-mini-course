@@ -9,11 +9,13 @@ attachments :
 
 Welcome to the course! My name is Francis and in this course, you'll learn to define your own functions. 
 
-Specifically, you will learn to do the following:
+Specifically, in this video and in the interactive exercises that follow it, you will learn to do the following:
 
 - define functions without parameters,
 - define functions with single parameters, and
 - define functions that return a single value.
+
+In the next section, you'll learn how to pass multiple arguments to functions, as well as return not just one, but multiple values from them.
 
 Let's begin!
 
