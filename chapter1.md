@@ -210,7 +210,12 @@ test_function_definition(
                                  args = [0], 
                                  incorrect_msg = "you should use the print() function."))
 
-# Test if shout() 
+test_function_definition(
+    "shout", 
+    arg_names = True,
+    body = lambda: test_object("shout_word"))
+
+# Test if shout() is called
 test_function("shout")
 
 success_msg("Great work!")
