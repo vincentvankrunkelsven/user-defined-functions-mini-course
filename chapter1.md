@@ -251,10 +251,8 @@ You will now update `shout()` by adding a _parameter_ so that it can accept and 
 - Call the `shout` function, passing to it the string, `help`.
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- Use the new parameter to form the new value to be assigned to `shout_word`.
+- When calling the `shout` function, use the format: _function name_`(`_argument_`)`.
 
 *** =pre_exercise_code
 ```{python}
