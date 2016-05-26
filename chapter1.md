@@ -609,14 +609,6 @@ A three-element tuple named `nums` has been preloaded for this exercise.
 ```{python}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
-# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 2. Preload a package
-import numpy as np
-
 # 3. Preload variables and values
 nums = (3,4,6)
 ```
@@ -645,29 +637,13 @@ even_nums = (2, num2, num3)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
-
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
+# Check if the student changed the unpacked nums to num1, num2, and num3 correctly
+test_object("num1", 
+            incorrect_msg="Did you unpack `nums` to the correct variables?")
+test_object("num2",
+            incorrect_msg="Did you unpack `nums` to the correct variables?")
+test_object("num3",
+            incorrect_msg="Did you unpack `nums` to the correct variables?")
 
 success_msg("Great work!")
 ```
