@@ -346,6 +346,7 @@ Modify the `shout()` function you wrote earlier such that instead of printing wi
 *** =hint
 - You concatenate strings with the use of the `+` operator.
 - Make sure that `yell` receives the output from the call to `shout()`.
+- Don't forget to pass in the right value for the argument when calling `shout()`.
 
 *** =pre_exercise_code
 ```{python}
@@ -703,10 +704,10 @@ Let's now update our `shout()` function to return multiple values. Instead of re
 
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- You concatenate strings with the use of the `+` operator.
+- Check that you have the correct number of parameters in the function header.
+- Remember that tuples are constructed with parentheses `()`.
+- Make sure you unpack the result of `shout_all()` into the right number of variables.
 
 *** =pre_exercise_code
 ```{python}
