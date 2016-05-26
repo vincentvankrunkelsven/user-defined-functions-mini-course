@@ -9,7 +9,7 @@ attachments :
 
 Welcome to the course! My name is Francis and in this course, you'll learn to define your own functions. 
 
-Specifically, you will be learning to do the following:
+Specifically, you will learn to do the following:
 
 - define functions without parameters,
 - define functions with single parameters, and
@@ -17,7 +17,7 @@ Specifically, you will be learning to do the following:
 
 Let's begin!
 
-You've learned how to use built-in functions in Python such as `print()` and `str()`.
+You know how to use built-in functions in Python such as `print()` and `str()`.
 
 Recall that `print()` accepts a string (or a set of strings) and prints the string out into the shell. For example:
 
@@ -56,11 +56,11 @@ def square():
     new_value = 4 ** 2
     print(new_value)
 ```
-Right now, the `square()` function does not have any parameters within the `()`. You will add them later. Now, whenever this function is called, the code that appears after the function header is run. In this case, `new_value` is assigned the value of $4 ** 2$ and then printed out.
+Right now, the `square()` function does not have any parameters within the `()`. You will add them later. Now, whenever this function is called, the code that appears after the function header is run. In this case, `new_value` is assigned the value of `4 ** 2` and then printed out.
 
 You can call the function as you do with pre-built functions: `square()`. This should yield the value, _16_.
 
-This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a **parameter** to the function in between the parentheses. A parameter allows the user of the function to _pass arguments_ to the function so it can process different values. 
+This isn't as helpful, though. What if you wanted to square any other number besides 4? To do that, you add a **parameter** to the function in between the parentheses. A parameter allows the user of the function to **pass arguments** to the function so it can process different values. 
 
 A quick word on using _parameters_ vs. _arguments_:
 
