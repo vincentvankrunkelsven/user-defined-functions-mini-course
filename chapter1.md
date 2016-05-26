@@ -113,10 +113,10 @@ x = 4.89
 *** =sct
 ```{python}
 test_mc(correct = 3, 
-        msgs = ["Nope!",
-                "Nope!",
+        msgs = ["No, not all are strings. Use the type function to check!",
+                "Not quite. What do `str()` and `print()` output again?",
                 "Correct!",
-                "Nope!"])
+                "No, not all are `NoneType`s. Use the type function to check!"])
 ```
 
 
