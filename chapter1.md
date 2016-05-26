@@ -92,6 +92,8 @@ In the IPython shell, do the following:
 
 What are the types of `x`, `y1`, and `y2`?
 
+blah.
+
 *** =instructions
 - They are all `str` types.
 - `x` is a `float`, `y1` is an `float`, and `y2` is a `str`.
@@ -104,20 +106,7 @@ What are the types of `x`, `y1`, and `y2`?
 *** =pre_exercise_code
 ```{r}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-#plt.scatter(movies.runtime, movies.rating)
-#plt.show()
-
-# 4. Preload variables and values
+# Preload variables and values
 x = 4.89
 ```
 
