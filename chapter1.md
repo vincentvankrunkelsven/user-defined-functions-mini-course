@@ -205,7 +205,10 @@ shout()
 
 test_function_definition("shout", arg_names = True)
 
-test_function_definition("shout", outputs = [])
+test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this 
+    body = lambda: test_function("print", args = [], incorrect_msg = "you should use the `print()` function."))
+
+# test_function_definition("shout", outputs = [()])
 
 # Test if shout() is called
 test_function("shout")
