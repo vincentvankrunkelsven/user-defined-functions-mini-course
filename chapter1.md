@@ -205,7 +205,7 @@ shout()
 
 test_function_definition("shout", arg_names = True)
 
-test_function_definition("shout", outputs = [(None,'congratulations!!!')])
+test_function_definition("shout", outputs = [()])
 
 # Test if shout() is called
 test_function("shout")
