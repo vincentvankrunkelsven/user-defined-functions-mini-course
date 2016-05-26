@@ -122,18 +122,12 @@ x = 4.89
 ```
 
 *** =sct
-```{r}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
-# pythonwhat Python package
-
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
-
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success]) 
+```{python}
+test_mc(correct = 3, 
+        msgs = ["Nope!",
+                "Nope!",
+                "Correct!",
+                "Nope!])
 ```
 
 
