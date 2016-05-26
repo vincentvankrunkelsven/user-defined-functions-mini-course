@@ -523,7 +523,8 @@ A three-element tuple named `nums` has been preloaded for this exercise.
 *** =instructions
 - Print out the value of `nums` in the IPython shell. Note the elements in the tuple.
 - In the IPython shell, try to change the first element of `nums` to the value _2_ by doing an assignment: `nums[0] = 2`. What happens?
-- Construct a new tuple, `even_nums` composed of the same elements in `nums`, but with the odd-numbered elements replaced with the value, _2_. Use the variables `num1`, `num2`, and `num3` to unpack `nums`.
+- Unpack `nums` to the variables `num1`, `num2`, and `num3`.
+- Construct a new tuple, `even_nums` composed of the same elements in `nums`, but with the odd-numbered elements replaced with the value, _2_.
 
 *** =hint
 - The number of elements in `nums` determines how many variables you'll need to unpack them to.
