@@ -85,13 +85,15 @@ def square(value):
     return new_value
 ```
 
-Now your `square` function returns the value instead of printing it. This means that calling the function requires that you assign the result of the function to a variable. This allows you to use the result later. Here's an example of how to do this:
+Now your `square` function returns the value instead of printing it. Let's call the `square()` function and pass the number 4 as an argument:
 
 ```
 num = square(4)
 ```
 
-In the example above, the value _4_ was passed to `square()`. Because `square()` returns a value, the call is assigned to the variable `num`, which receives whatever value that the call to `square()` returns.
+In the example above, the value _4_ was passed to the function call to `square()`. Also note that the function call is assigned to the variable `num`. Because `square()` returns a value, the value it _returns_ will get stored in `num`, which you can later on use for other computations.
+
+You've now just learned the basics of defining your own functions! Now it's your turn. In the next few exercises, you will try your hand at defining and using your own functions. 
 
 *** =video_link
 //player.vimeo.com/video/154783078
