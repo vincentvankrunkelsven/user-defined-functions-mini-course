@@ -154,7 +154,7 @@ You will **concatenate** the string with the exclamation marks. Recall that you 
 - Call the `shout` function.
 
 *** =hint
-- The recipe for concatenating two strings is: _string`_ `+` _string2_.
+- The recipe for concatenating two strings is: _string1_ `+` _string2_.
 - The recipe for calling functions without arguments is _function name_`()`.
 
 *** =pre_exercise_code
@@ -224,7 +224,7 @@ You will now update `shout()` by adding a _parameter_ so that it can accept and 
 
 *** =instructions
 - Complete the function header by adding the parameter name, `word`.
-- Assign the result of concatenating `word` with `'!!!'` to the variable `shout_word`.
+- Assign the result of concatenating `word` with `'!!!'` to `shout_word`.
 - Print the value of `shout_word`.
 - Call the `shout` function, passing to it the string, `congratulations`.
 
@@ -278,50 +278,26 @@ shout('congratulations')
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
-
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
-
 success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Writing simple functions that return a single value
 
-You're getting very good at this! Try your hand at another modification to the `shout()` function.
+You're getting very good at this! Try your hand at another modification to the `shout()` function so that it now _returns_ a single value.
 
-Modify the `shout()` function you wrote earlier such that instead of printing within the `shout()` function, you return a value instead. Parts of the function `shout()`, which you wrote earlier, is shown.
+Modify the `shout()` function you wrote earlier such that instead of printing within the `shout()` function, you _return_ a value instead. Parts of the function `shout()`, which you wrote earlier, are shown.
 
 *** =instructions
-- Concatenate the string in `word` with `'!!!'` and assign to `shout_word`
+- In the function body, concatenate the string in `word` with `'!!!'` and assign to `shout_word`.
 - Replace the `print` statement with the appropriate `return` statement.
-- Call the `shout` function, passing to it the string, `help`, and assigning the call to the variable, `yell`.
+- Call the `shout` function, passing to it the string, `congratulations`, and assigning the call to the variable, `yell`.
 - To check if `yell` contains the value returned by `shout()`, print the value of `yell`
 
 *** =hint
 - You concatenate strings with the use of the `+` operator.
-- Make sure that `yell` receives the output from the call to `shout()`.
-- Don't forget to pass in the right value for the argument when calling `shout()`.
+- Make sure you assign the `shout()` function call to `yell`.
+- Don't forget to pass in the correct value for the argument when calling `shout()`.
 
 *** =pre_exercise_code
 ```{python}
@@ -347,7 +323,7 @@ def shout (word):
     # Replace the print statement with the appropriate return statement
     print(shout_word)
 
-# Call shout with the string 'help' and assign the result to yell
+# Call shout with the string 'congratulations' and assign the result to yell
 
 
 # Print the value of yell
@@ -365,8 +341,8 @@ def shout (word):
     # Replace the print statement with the appropriate return statement
     return shout_word
 
-# Call shout with the string 'help' and assign the result to yell
-yell = shout('help')
+# Call shout with the string 'congratulations' and assign the result to yell
+yell = shout('congratulations')
 
 # Print the value of yell
 print(yell)
@@ -377,30 +353,6 @@ print(yell)
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
-
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
-
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
 
 success_msg("Great work!")
 ```
