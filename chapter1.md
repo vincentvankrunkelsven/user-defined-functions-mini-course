@@ -298,10 +298,21 @@ shout('congratulations')
 # Note [FRANCIS]: Tests appear code-level, that is, as they appear top-down in the code.
 
 # Test definition of shout()
-#test_function_definition("shout", arg_names = True)
+test_function_definition("shout", arg_names = True)
+
+# Test the value of word
+test_function_definition(
+    "shout", 
+    arg_names = False, 
+    body = lambda: test_object_after_expression("word")
+)
 
 # Test the value of shout_word
-test_function_definition('shout', arg_names = False, body = lambda: test_object_after_expression("shout_word", context_vals = ["congratulations"]))
+test_function_definition(
+    "shout", 
+    arg_names = False, 
+    body = lambda: test_object_after_expression("shout_word", context_vals = ["congratulations"])
+)
 
 # Test the print() call
 test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this 
@@ -309,6 +320,9 @@ test_function_definition("shout", arg_names = False, arg_defaults = False, # Alr
 
 # Test if shout() is called
 test_function("shout")
+
+# Test the output
+test_output_countains("congratulations!!!", pattern = False)
 
 success_msg("Great work!")
 ```
@@ -392,21 +406,24 @@ print(yell)
 test_function_definition("shout", arg_names = True)
 
 # Test the value of word
-test_function_definition('shout', body = lambda: test_object_after_expression('word'))
+test_function_definition("shout", body = lambda: test_object_after_expression("word"))
 
 # Test the value of shout_word
-test_function_definition('shout', body = lambda: test_object_after_expression('shout_word'))
-
-# Test return value of shout()
-test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this
-    results = [(hello),(datacamp)]
-)
+test_function_definition("shout", body = lambda: test_object_after_expression("shout_word"))
 
 # Test if shout() is called
 test_function("shout")
 
+# Test return value of shout()
+test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this
+    results = [("hello"), ("datacamp")]
+)
+
 # Test the value of yell
-test_object("yell", incorrect_msg="Did you assign the result of shout() to yell?")
+test_object("yell", incorrect_msg = "Did you assign the result of shout() to yell?")
+
+# Test the output
+test_output_contains("congratulations!!!", pattern = False)
 
 success_msg("Great work!")
 ```
@@ -570,33 +587,33 @@ print(yell)
 test_function_definition("shout", arg_names = True)
 
 # Test the value of word1
-test_function_definition('shout', body = lambda: test_object_after_expression('word1'))
+test_function_definition("shout", body = lambda: test_object_after_expression("word1"))
 
 # Test the value of shout1
-test_function_definition('shout', body = lambda: test_object_after_expression('shout1'))
+test_function_definition("shout", body = lambda: test_object_after_expression("shout1"))
 
 # Test the value of word2
-test_function_definition('shout', body = lambda: test_object_after_expression('word2'))
+test_function_definition("shout", body = lambda: test_object_after_expression("word2"))
 
 # Test the value of shout2
-test_function_definition('shout', body = lambda: test_object_after_expression('shout2'))
+test_function_definition("shout", body = lambda: test_object_after_expression("shout2"))
 
 # Test the value of new_shout
-test_function_definition('shout', body = lambda: test_object_after_expression('new_shout'))
+test_function_definition("shout", body = lambda: test_object_after_expression("new_shout"))
 
 # Test return value of shout()
 test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this
-    results = [(hello, hi),(data, camp)]
+    results = [("hello", "hi"), ("data", "camp")]
 )
 
 # Test if shout() is called
 test_function("shout")
 
 # Test the value of yell
-test_object("yell", incorrect_msg="Did you assign the result of shout() to yell?")
+test_object("yell", incorrect_msg = "Did you assign the result of shout() to yell?")
 
 # Test the output
-test_output_contains('congratulations!!!you!!!', pattern = False)
+test_output_contains("congratulations!!!you!!!", pattern = False)
 
 success_msg("Great work!")
 ```
@@ -652,8 +669,8 @@ even_nums = (2, num2, num3)
 
 # Test if nums is unpacked to num1, num2, and num3 correctly
 test_object("num1", incorrect_msg="Did you unpack `nums` to the correct variables?")
-test_object("num2",incorrect_msg="Did you unpack `nums` to the correct variables?")
-test_object("num3",incorrect_msg="Did you unpack `nums` to the correct variables?")
+test_object("num2", incorrect_msg="Did you unpack `nums` to the correct variables?")
+test_object("num3", incorrect_msg="Did you unpack `nums` to the correct variables?")
 
 # Test the value of even_nums
 test_object("even_nums", incorrect_msg = "Check the values in your tuple.")
@@ -769,7 +786,7 @@ test_function_definition("shout_all", body = lambda: test_object_after_expressio
 
 # Test return value of shout_all()
 test_function_definition("shout_all", arg_names = False, arg_defaults = False, # Already tested this
-    results = [(hello),(datacamp)]
+    results = [("hello", "hi"), ("data", "camp")]
 )
 
 # Test if shout_all() is called
@@ -782,8 +799,8 @@ test_object("yell1", incorrect_msg="Did you assign the result of shout_all() to 
 test_object("yell2", incorrect_msg="Did you assign the result of shout_all() to yell2?")
 
 # Test the output
-test_output_contains('congratulations!!!', pattern = False)
-test_output_contains('you!!!', pattern = False)
+test_output_contains("congratulations!!!", pattern = False)
+test_output_contains("you!!!", pattern = False)
 
 success_msg("Great work!")
 ```
