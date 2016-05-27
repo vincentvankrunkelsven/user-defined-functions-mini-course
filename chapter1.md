@@ -392,18 +392,22 @@ print(yell)
 # Test definition of shout()
 test_function_definition("shout", arg_names = True)
 
+# Test the value of word
+test_function_definition('shout', body = lambda: test_object_after_expression('word'))
+
 # Test the value of shout_word
 test_function_definition('shout', body = lambda: test_object_after_expression('shout_word'))
 
 # Test return value of shout()
 test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this
-    results = [
-        (hello),
-        (datacamp)]
+    results = [(hello),(datacamp)]
 )
 
 # Test if shout() is called
 test_function("shout")
+
+# Test the value of yell
+test_object("yell", incorrect_msg="Did you assign the result of shout to yell?")
 
 success_msg("Great work!")
 ```
