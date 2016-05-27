@@ -311,7 +311,7 @@ test_function_definition(
 test_function_definition(
     "shout", 
     arg_names = False, 
-    body = lambda: test_object_after_expression("shout_word", context_vals = ["congratulations"])
+    body = lambda: test_object_after_expression("shout_word", context_vals = ["congratulations!!!"])
 )
 
 # Test the print() call
