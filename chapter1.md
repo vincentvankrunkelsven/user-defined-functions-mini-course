@@ -322,7 +322,7 @@ test_function_definition("shout", arg_names = False, arg_defaults = False, # Alr
 test_function("shout")
 
 # Test the output
-test_output_countains("congratulations!!!", pattern = False)
+test_output_contains("congratulations!!!", pattern = False)
 
 success_msg("Great work!")
 ```
