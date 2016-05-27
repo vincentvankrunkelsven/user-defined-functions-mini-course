@@ -572,8 +572,14 @@ test_function_definition("shout", arg_names = True)
 # Test the value of word1
 test_function_definition('shout', body = lambda: test_object_after_expression('word1'))
 
+# Test the value of shout1
+test_function_definition('shout', body = lambda: test_object_after_expression('shout1'))
+
 # Test the value of word2
 test_function_definition('shout', body = lambda: test_object_after_expression('word2'))
+
+# Test the value of shout2
+test_function_definition('shout', body = lambda: test_object_after_expression('shout2'))
 
 # Test the value of new_shout
 test_function_definition('shout', body = lambda: test_object_after_expression('new_shout'))
@@ -588,6 +594,9 @@ test_function("shout")
 
 # Test the value of yell
 test_object("yell", incorrect_msg="Did you assign the result of shout() to yell?")
+
+# Test the output
+test_output_contains('congratulations!!!you!!!', pattern = False)
 
 success_msg("Great work!")
 ```
@@ -641,11 +650,12 @@ even_nums = (2, num2, num3)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check if the student changed the unpacked nums to num1, num2, and num3 correctly
+# Test if nums is unpacked to num1, num2, and num3 correctly
 test_object("num1", incorrect_msg="Did you unpack `nums` to the correct variables?")
 test_object("num2",incorrect_msg="Did you unpack `nums` to the correct variables?")
 test_object("num3",incorrect_msg="Did you unpack `nums` to the correct variables?")
 
+# Test the value of even_nums
 test_object("even_nums", incorrect_msg = "Check the values in your tuple.")
 
 success_msg("Great work!")
@@ -736,6 +746,44 @@ print(yell2)
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Note [FRANCIS]: Tests appear code-level, that is, as they appear top-down in the code.
+
+# Test definition of shout_all()
+test_function_definition("shout_all", arg_names = True)
+
+# Test the value of word1
+test_function_definition("shout_all", body = lambda: test_object_after_expression("word1"))
+
+# Test the value of shout1
+test_function_definition("shout_all", body = lambda: test_object_after_expression("shout1"))
+
+# Test the value of word2
+test_function_definition("shout_all", body = lambda: test_object_after_expression("word2"))
+
+# Test the value of shout2
+test_function_definition("shout_all", body = lambda: test_object_after_expression("shout2"))
+
+# Test the value of shout_words
+test_function_definition("shout_all", body = lambda: test_object_after_expression("shout_words"))
+
+# Test return value of shout_all()
+test_function_definition("shout_all", arg_names = False, arg_defaults = False, # Already tested this
+    results = [(hello),(datacamp)]
+)
+
+# Test if shout_all() is called
+test_function("shout_all")
+
+# Test the value of yell1
+test_object("yell1", incorrect_msg="Did you assign the result of shout_all() to yell1?")
+
+# Test the value of yell2
+test_object("yell2", incorrect_msg="Did you assign the result of shout_all() to yell2?")
+
+# Test the output
+test_output_contains('congratulations!!!', pattern = False)
+test_output_contains('you!!!', pattern = False)
 
 success_msg("Great work!")
 ```
