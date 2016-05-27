@@ -136,7 +136,7 @@ test_mc(correct = 3,
         msgs = ["No, not all are strings. Use the `type()` function to check!",
                 "Not quite. What do `str()` and `print()` output again?",
                 "Correct!",
-                "No, not all are `NoneType`s. Use the type function to check!"])
+                "No, not all are `NoneType`s. Use the `type()` function to check!"])
 ```
 
 
@@ -205,12 +205,17 @@ shout()
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
+# Note [FRANCIS]: Tests appear code-level, that is, as they appear top-down in the code.
+
+# Test definition of shout()
 test_function_definition("shout", arg_names = True)
 
+# Test the value of shout_word
+test_function_definition('shout', body = lambda: test_object_after_expression('shout_word'))
+
+# Test the print() call
 test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this 
     body = lambda: test_function("print", args = [], incorrect_msg = "you should use the `print()` function."))
-
-# test_function_definition("shout", outputs = [()])
 
 # Test if shout() is called
 test_function("shout")
