@@ -211,14 +211,23 @@ shout()
 test_function_definition("shout", arg_names = True)
 
 # Test the value of shout_word
-test_function_definition('shout', arg_names = False, body = lambda: test_object_after_expression("shout_word", context_vals = []))
+test_function_definition(
+    "shout", 
+    arg_names = False, 
+    body = lambda: test_object_after_expression("shout_word", context_vals = []))
 
 # Test the print() call
-test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this 
+test_function_definition(
+    "shout", 
+    arg_names = False, 
+    arg_defaults = False, # Already tested this 
     body = lambda: test_function("print", args = [0], incorrect_msg = "you should use the `print()` function with the correct argument."))
 
 # Test if shout() is called
 test_function("shout")
+
+# Test the output
+test_output_contains("congratulations!!!", pattern = False)
 
 success_msg("Great work!")
 ```
