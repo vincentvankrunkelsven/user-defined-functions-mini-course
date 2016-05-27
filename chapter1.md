@@ -565,6 +565,31 @@ print(yell)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
+# Note [FRANCIS]: Tests appear code-level, that is, as they appear top-down in the code.
+
+# Test definition of shout()
+test_function_definition("shout", arg_names = True)
+
+# Test the value of word1
+test_function_definition('shout', body = lambda: test_object_after_expression('word1'))
+
+# Test the value of word2
+test_function_definition('shout', body = lambda: test_object_after_expression('word2'))
+
+# Test the value of new_shout
+test_function_definition('shout', body = lambda: test_object_after_expression('new_shout'))
+
+# Test return value of shout()
+test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this
+    results = [(hello, hi),(data, camp)]
+)
+
+# Test if shout() is called
+test_function("shout")
+
+# Test the value of yell
+test_object("yell", incorrect_msg="Did you assign the result of shout() to yell?")
+
 success_msg("Great work!")
 ```
 
