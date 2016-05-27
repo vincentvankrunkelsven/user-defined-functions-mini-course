@@ -305,7 +305,7 @@ test_function_definition('shout', arg_names = False, body = lambda: test_object_
 
 # Test the print() call
 test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this 
-    body = lambda: test_function("print", args = [], incorrect_msg = "you should use the `print()` function with the correct argument."))
+    body = lambda: test_function("print", args = [0], incorrect_msg = "you should use the `print()` function with the correct argument."))
 # [NOT WORKING IN THIS TEST]: args = [0]
 
 # Test if shout() is called
