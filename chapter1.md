@@ -407,7 +407,7 @@ test_function_definition("shout", arg_names = False, arg_defaults = False, # Alr
 test_function("shout")
 
 # Test the value of yell
-test_object("yell", incorrect_msg="Did you assign the result of shout to yell?")
+test_object("yell", incorrect_msg="Did you assign the result of shout() to yell?")
 
 success_msg("Great work!")
 ```
