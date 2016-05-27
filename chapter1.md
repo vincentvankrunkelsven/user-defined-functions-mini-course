@@ -618,13 +618,10 @@ even_nums = (2, num2, num3)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check if the student changed the unpacked nums to num1, num2, and num3 correctly
-test_object("num1", 
-            incorrect_msg="Did you unpack `nums` to the correct variables?")
-test_object("num2",
-            incorrect_msg="Did you unpack `nums` to the correct variables?")
-test_object("num3",
-            incorrect_msg="Did you unpack `nums` to the correct variables?")
-            
+test_object("num1", incorrect_msg="Did you unpack `nums` to the correct variables?")
+test_object("num2",incorrect_msg="Did you unpack `nums` to the correct variables?")
+test_object("num3",incorrect_msg="Did you unpack `nums` to the correct variables?")
+
 test_object("even_nums", incorrect_msg = "Check the values in your tuple.")
 
 success_msg("Great work!")
