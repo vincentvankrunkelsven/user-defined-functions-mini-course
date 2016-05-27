@@ -299,7 +299,7 @@ shout('congratulations')
 # Note [FRANCIS]: Tests appear code-level, that is, as they appear top-down in the code.
 
 # Test definition of shout()
-test_function_definition("shout", arg_names = True)
+#test_function_definition("shout", arg_names = True)
 
 # Test the value of shout_word
 test_function_definition('shout', body = lambda: test_object_after_expression('shout_word'))
