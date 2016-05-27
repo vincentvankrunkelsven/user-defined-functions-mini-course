@@ -304,7 +304,7 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False, 
-    body = lambda: test_object_after_expression("word")
+    body = lambda: test_object_after_expression("word", context_vals = ["congratulations"])
 )
 
 # Test the value of shout_word
