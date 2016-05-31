@@ -5,7 +5,7 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:VideoExercise lang:python xp:50 skills:1 key:9a600c4910
-## Introduction to user-defined functions
+## Introduction to User-defined Functions
 
 Welcome to the course! My name is Francis and in this course, you'll learn to define your own functions. 
 
@@ -102,7 +102,7 @@ You've now just learned the basics of defining your own functions! Now it's your
 
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
-## Recapping the use of functions
+## Recapping built-in functions
 
 Let's do a recap of what you know about using built-in functions. Here, you will use the `str()` and `print()` functions and figure out which function returns a value. A variable `x` has been preloaded for this exercise.
 
@@ -141,7 +141,7 @@ test_mc(correct = 3,
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key: key:22ba90bcbd
-## Writing a simple function
+## Write a Simple Function
 
 In the last lecture, Francisco described the basics of how to define a function. You will now write your own function!
 
@@ -234,7 +234,7 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:3d1bbbef0d
-## Writing a simple function that takes an argument
+## Write a Single-Parameter Function
 
 Congratulations! You have successfully defined _and_ called your own function! That's pretty cool.
 
@@ -342,7 +342,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
-## Writing simple functions that return a single value
+## Return a Single Value
 
 You're getting very good at this! Try your hand at another modification to the `shout()` function so that it now _returns_ a single value.
 
@@ -443,7 +443,7 @@ success_msg("Great work!")
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:1 key:1558296060:929b1ddd2a
-## Multiple arguments and return values
+## Multiple Parameters and Return Values
 
 Welcome back! You're doing pretty well at defining your own functions, good job!
 
@@ -514,7 +514,7 @@ Looking at the modifications to `raise()`. Notice that in addition to the `value
 
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:419a27dc8b
-## Writing simple functions that accept multiple arguments
+## Write Functions with Multiple Parameters
 
 Francisco discussed the use of multiple parameters in defining functions in the last lecture. You are now going to use what you've learned to modify the `shout()` function further.
 
@@ -633,7 +633,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:50 skills:1  key:ee3e217dd9
-## A brief introduction to tuples
+## A Brief Introduction to Tuples
 
 Alongside learning about functions, you've also learned about tuples! Here, you will practice what you've learned about tuples: how to construct, unpack, and access tuple elements.
 
@@ -693,7 +693,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
-## Write a function that returns multiple values
+## Returns Multiple Values
 
 In the previous exercise, you constructed tuples, assigned tuples to variables, and unpacked tuples. Here you will return mutiple values from a function using tuples.
 
