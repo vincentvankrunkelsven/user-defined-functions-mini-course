@@ -1,6 +1,6 @@
 ---
 title       : User-defined Functions
-description : Recall prior knowledge on how to use functions and learn to develop your own functions
+description : Learn to develop your own functions
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
@@ -693,7 +693,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1  key:9377e3271f
-## Returns Multiple Values
+## Return Multiple Values
 
 In the previous exercise, you constructed tuples, assigned tuples to variables, and unpacked tuples. Here you will return mutiple values from a function using tuples.
 
