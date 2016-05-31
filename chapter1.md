@@ -225,7 +225,7 @@ test_function_definition(
     body = lambda: test_function("print", args = [], incorrect_msg = "you should use the `print()`."))
 
 test_function_definition("shout", arg_names = False, arg_defaults = False,
-    outputs = [''])
+    body = lambda: test_expression_output())
 
 # Test if shout() is called
 test_function("shout")
