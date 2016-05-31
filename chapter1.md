@@ -214,7 +214,7 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False, 
-    body = lambda: test_object_after_expression("shout_word", context_vals = []))
+    body = lambda: test_object_after_expression("shout_word"))
 
 # Test the print() call
 test_function_definition(
@@ -325,7 +325,12 @@ test_function_definition(
 
 # Test the print() call
 test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this 
-    body = lambda: test_function("print", args = [0], incorrect_msg = "you should use the `print()` function with the correct argument."))
+    body = lambda: test_function("print", args = []))
+test_function_definition(
+    "shout", 
+    arg_names = False, 
+    arg_defaults = False, # Already tested this 
+    outputs = [])
 
 # Test if shout() is called
 test_function("shout")
