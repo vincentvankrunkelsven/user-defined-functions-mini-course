@@ -102,11 +102,11 @@ You've now just learned the basics of defining your own functions! Now it's your
 
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:0ecf40f893
-## Recapping built-in functions
+## Recapping Built-in Functions
 
-Let's do a recap of what you know about using built-in functions. Here, you will use the `str()` and `print()` functions and figure out which function returns a value. A variable `x` has been preloaded for this exercise.
+In the video, we briefly examined the return behavior of the built-in functions `print()` and `str()`. Here, you will use both functions and examine their return values. A variable `x` has been preloaded for this exercise.
 
-In the IPython shell, do the following:
+Run the code below in the console. Pay close attention to the results to answer the question that follows.
 
 - Assign `str(x)` to a variable `y1`: `y1 = str(x)`
 - Assign `print(x)` to a variable `y2`: `y2 = print(x)`
