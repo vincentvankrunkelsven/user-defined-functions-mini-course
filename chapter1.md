@@ -214,7 +214,7 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False, 
-    body = lambda: test_object_after_expression("shout_word"))
+    body = lambda: test_object_after_expression("shout_word", incorrect_msg = 'test'))
 
 # Test the print() call
 test_function_definition(
